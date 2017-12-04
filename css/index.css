@@ -1,0 +1,270 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+body {
+    width: 100%;
+}
+.as {
+     display:inline-block;
+}
+.link a {
+    color: black;
+}
+a {
+    text-decoration: none !important;
+}
+.navbars {
+    z-index: 999;
+    position: fixed;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-right: -10%;
+    font-family: 'Lato';
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+}
+.thing {
+    width: 150%;
+    background: #B2B2B0;
+    z-index: 999;
+    margin: 0px;
+
+}
+#hoo {
+    
+    background-image: url('../img/homeimage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 2em;
+    height: 60%;
+    width: 100%;
+    padding-bottom:1em;
+}
+.nav1 {
+    color: white;
+    font-size: 15px;
+}
+.title {
+    padding: 100px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto';
+}
+.title h1 {
+    padding-top: 2em;
+}
+body {
+    margin: 0 auto;
+}
+.buttons {
+    color: white;
+}
+
+.barss {
+    color: white;
+}
+
+.desc {
+    background-color: #74B7D6;
+    width: 100%;
+    height: 100%;
+}
+.desch {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto';
+}
+.arrow {
+    color: white;
+}
+
+@media only screen and (max-width: 480px) {
+    .link {
+        font-size: 15px;
+    }
+    .logo {
+        color: white;
+    }
+}
+
+.logo {
+    padding-left:1em;
+}
+.desc2 {
+    background-color: #ffffff;
+    width: 100%;
+    height: 500px;
+}
+.desch2 {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 1em;
+}
+.minipic {
+    max-width: 100%;
+    height: auto;
+}
+.bod {
+    background: 
+        linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, 
+        linear-gradient(63deg, transparent 74%, #999 78%), 
+        linear-gradient(63deg, transparent 34%, #999 38%, #fff 58%, transparent 62%), 
+        #74B7D6;
+        background-size: 16px 48px;
+
+}
+#ppHeader {
+    font-family: 'Lato';
+    color: black;
+    font-size:21pt;
+    width:100%;
+    margin:0 auto;
+    padding-top: 5em;
+
+}
+#ppBody {
+    font-size:11pt;
+    width:100%;
+    margin:0 auto;
+    text-align:justify;
+
+}
+.ppConsistencies
+{
+    display:none;
+    padding-left: 1em;
+    padding-right:1em;
+}
+.divback {
+    margin-left:3em;
+    margin-right: 3em;
+    background-color: white;
+    padding-left: 1em;
+    padding-right:1em;
+    padding-bottom: 1em;
+}
+.janus {
+    padding-left: 1em;
+    padding-right:1em;
+    background-color: white;
+}
+.dank {
+    background-color: #768AFF;
+    min-height: 75%
+}
+.contain {
+    min-height: 75%;
+}
+.copyme {
+    text-align: center;
+}
+.pol {
+    max-height: 250px;
+}
+.about {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.divbacks {
+
+    background-color: white;
+    padding-left: 1em;
+    padding-right:1em;
+    padding-bottom: 1em;
+}
+.images {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.my-copy {
+    text-align: center;
+}
+.strapthatboot {
+    width: 10%;
+    height:10%;
+    display:block;
+}
+
+.boxthatmap {
+    width: 35%;
+    height: 35%;
+    display:block;
+}
+.divbacks p {
+    text-indent: 1em;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 25px;
+  width: 10%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #6F5499;
+}
+.contains {
+  position: relative;
+  width: 100%;
+  height:100%;
+}
+.contains:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.overlays {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 25px;
+  width: 35%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #3887be;
+}
+.contains2 {
+  position: relative;
+  width: 100%;
+  height:100%;
+}
+.contains2:hover .overlays {
+  opacity: 1;
+}
+
+.texts {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.google {
+    font-size: 100px;
+}
