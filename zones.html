@@ -15,14 +15,16 @@
 
 <div id='map'></div>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoibG9nYW5vZm5lYWwiLCJhIjoiY2o3dW9zZHpmNDQzczJ3cnJlNHFxcmJ2ZiJ9.JfG6E8jXD6nGDWEVzbaOKQ';
+
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoiY2l1dTUzcmgxMDJ0djJ0b2VhY2sxNXBiMyJ9.25Qs4HNEkHubd4_Awbd8Og';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-100.486052, 37.830348],
+    center: [-97,35],
     zoom: 2
+   
 });
-
 map.on('load', function () {
     map.addSource("states", {
         "type": "geojson",
@@ -36,7 +38,7 @@ map.on('load', function () {
         "layout": {},
         "paint": {
             "fill-color": "#627BC1",
-            "fill-opacity": 0.5
+            "fill-opacity": 0
         }
     });
 
@@ -74,14 +76,20 @@ map.on('load', function () {
         map.setFilter("state-fills-hover", ["==", "name", ""]);
     });
     map.on('click', 'state-fills', function (e) {
-        var cords=e.lngLat.lat;
-        console.log(cords);
-  
-
-
+        var lng = (e.lngLat.lng);
+        var lat=(e.lngLat.lat);
+        console.log(lng,lat);
+        console.log(map.getZoom())
+        if (map.getZoom()<4) {
+        map.flyTo({
+        center: [
+            e.lngLat.lng,
+            e.lngLat.lat],
+        zoom: 6
+        });
+        }
     });
 });
 </script>
-
 </body>
 </html>

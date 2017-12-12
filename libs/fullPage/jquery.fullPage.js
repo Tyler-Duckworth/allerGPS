@@ -4,6 +4,8 @@
  * @license MIT licensed
  *
  * Copyright (C) 2015 alvarotrigo.com - A project by Alvaro Trigo
+ 
+ *Lines 790-798 Commented out by Tyler Duckworth [See comment for details] 12-8-2017
  */
 (function(global, factory) {
     'use strict';
@@ -785,6 +787,7 @@
         * Creates the control arrows for the given section
         */
         function createSlideArrows(section){
+            /* I commented this out to erase the Arrows, an unnessecary feature for my navigation.
             section.find(SLIDES_WRAPPER_SEL).after('<div class="' + SLIDES_ARROW_PREV + '"></div><div class="' + SLIDES_ARROW_NEXT + '"></div>');
 
             if(options.controlArrowColor!='#fff'){
@@ -794,7 +797,7 @@
 
             if(!options.loopHorizontal){
                 section.find(SLIDES_ARROW_PREV_SEL).hide();
-            }
+            }*/
         }
 
         /**
