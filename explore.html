@@ -4,8 +4,8 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
     <script src='markers/markers.js'></script>
     <style>
         body { margin:0; padding:0; }
@@ -18,13 +18,29 @@
 <body>
 
 <div id='map'></div>
-<script>
+<script> 
+mapboxgl.accessToken = 'pk.eyJ1IjoidGhlLXF1YWNrIiwiYSI6ImNqN3Vvd2FtYjQ3MnIycXBrc2l3c2dxNnQifQ.7DS42b3thgYdTvi-b-2kJg';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-96, 37.8], // starting position
+    zoom: 3 // starting zoom
+});
+
+// Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
+/*
 var bounds = [
     [-125,25], // Southwest coordinates
     [-70,50]  // Northeast coordinates
 ];
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoiY2l1dTUzcmgxMDJ0djJ0b2VhY2sxNXBiMyJ9.25Qs4HNEkHubd4_Awbd8Og';
+mapboxgl.accessToken = 'pk.eyJ1IjoidGhlLXF1YWNrIiwiYSI6ImNqN3Vvd2FtYjQ3MnIycXBrc2l3c2dxNnQifQ.7DS42b3thgYdTvi-b-2kJg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -32,7 +48,12 @@ var map = new mapboxgl.Map({
     maxBounds: bounds // Sets bounds as max
    
 });
-
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
 map.on('style.load', function () {
     map.addSource("markers", {
         "type": "geojson",
@@ -48,12 +69,12 @@ map.on('style.load', function () {
             "icon-size": 1.25
         },
         "paint": {
-            /*"text-size": 10,*/
+            /*"text-size": 10,
         }
     });
     
-});
-
+});*/
+/*
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
 }));
@@ -83,7 +104,7 @@ map.on('mousemove', function (e) {
         if (err) throw err;
         map.getCanvas().style.cursor = features.length ? 'pointer' : '';
     });
-});
+});*/
 </script>
 
 
