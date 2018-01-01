@@ -1,0 +1,156 @@
+ {
+  "Arby's" : {
+    "Dairy" : 0.25,
+    "Nuts" : 1,
+    "Peanuts" : 1,
+    "Seafood" : 0.75,
+    "Wheat" : 0.25
+  },
+  "Barley's" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.25,
+    "Peanuts" : 0.5,
+    "Seafood" : 1,
+    "Wheat" : 0.25
+  },
+  "Blaze Pizza" : {
+    "Dairy" : 0.75,
+    "Nuts" : 1,
+    "Peanuts" : 1,
+    "Seafood" : 1,
+    "Wheat" : 1
+  },
+  "Blue Coast Grill & Bar" : {
+    "Dairy" : 0.5,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.25,
+    "Seafood" : 0.25,
+    "Wheat" : 0.5
+  },
+  "Burger King" : {
+    "Dairy" : 0.25,
+    "Nuts" : 1,
+    "Peanuts" : 0.75,
+    "Seafood" : 0.75,
+    "Wheat" : 0
+  },
+  "Chick Fil A" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.75,
+    "Peanuts" : 1,
+    "Seafood" : 1,
+    "Wheat" : 0.25
+  },
+  "Divinci's Pizza" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.5,
+    "Seafood" : 0.75,
+    "Wheat" : 0.25
+  },
+  "Five Guys" : {
+    "Dairy" : 0.5,
+    "Nuts" : 0,
+    "Peanuts" : 0.25,
+    "Seafood" : 1,
+    "Wheat" : 0.5
+  },
+  "Hardee's" : {
+    "Dairy" : 0,
+    "Nuts" : 1,
+    "Peanuts" : 1,
+    "Seafood" : 0.75,
+    "Wheat" : 0
+  },
+  "KFC" : {
+    "Dairy" : 0.75,
+    "Nuts" : 1,
+    "Peanuts" : 1,
+    "Seafood" : 1,
+    "Wheat" : 0
+  },
+  "Knox Mason" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.5,
+    "Seafood" : 0.5,
+    "Wheat" : 0.5
+  },
+  "McDonalds" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.5,
+    "Seafood" : 0.5,
+    "Wheat" : 0.25
+  },
+  "Melting Pot" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.25,
+    "Peanuts" : 0.25,
+    "Seafood" : 0.5,
+    "Wheat" : 0.25
+  },
+  "Panda Express" : {
+    "Dairy" : 0.5,
+    "Nuts" : 0.75,
+    "Peanuts" : 0.75,
+    "Seafood" : 0.75,
+    "Wheat" : 0
+  },
+  "Subway" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.75,
+    "Peanuts" : 0.75,
+    "Seafood" : 0.5,
+    "Wheat" : 0
+  },
+  "Sugar Mama's" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.5,
+    "Seafood" : 1,
+    "Wheat" : 0.25
+  },
+  "Sweet P's" : {
+    "Dairy" : 0.5,
+    "Nuts" : 0.75,
+    "Peanuts" : 0.75,
+    "Seafood" : 0.5,
+    "Wheat" : 0.75
+  },
+  "Taco Bell" : {
+    "Dairy" : 0.5,
+    "Nuts" : 1,
+    "Peanut" : 1,
+    "Seafood" : 1,
+    "Wheat" : 0.25
+  },
+  "The Crown & Goose" : {
+    "Diary" : 0.5,
+    "Nuts" : 0.25,
+    "Peanuts" : 0.25,
+    "Seafood" : 0.5,
+    "Wheat" : 0.25
+  },
+  "Tomato Head" : {
+    "Dairy" : 0.5,
+    "Nuts" : 0.75,
+    "Peanuts" : 0.75,
+    "Seafood" : 1,
+    "Wheat" : 0.5
+  },
+  "Tupleo Honey" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0,
+    "Peanut" : 0,
+    "Seafood" : 0.75,
+    "Wheat" : 0.25
+  },
+  "Wendy's" : {
+    "Dairy" : 0.25,
+    "Nuts" : 1,
+    "Peanuts" : 1,
+    "Seafood" : 0.5,
+    "Wheat" : 0
+  }
+}

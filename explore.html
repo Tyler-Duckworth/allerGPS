@@ -6,108 +6,188 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
-    <script src='markers/markers.js'></script>
+    <link href='css/index.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+        #map { width:500px;height:500px; }
+        a.active {
+            background-color: #3887be;
+            color: #ffffff;
+        }
+    
+        a.active:hover {
+            background: #3074a4;
+        }
 
+	/* Style for our header texts
+	* --------------------------------------- */
+	.fullpage h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	.navbars {
+    z-index: 999;
+    position: fixed;
+    min-width: 100%;
+    margin: 0 auto;
+    margin-right: -10%;
+    font-family: 'Lato';
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+	}
+	.thing {
+	    background: #B2B2B0;
+	    z-index: 999;
+	    margin: 0px;
+	    position: fixed;
+		padding-bottom: 5em;
+	}
+	.link a {
+	    color: black;
+	}
+	.link {
+		display: inline-block;
+	}
+	a {
+	    text-decoration: none !important;
+	}
+	.hones {
+	    z-index: 999;
+	    max-width: 100%;
+	    width: 100%;
+	    font-family: 'Lato';
+	    padding-bottom: 0.25em;
+	    padding-top: 0.25em;
+	}
+	.section {
+		background-size: cover;
+	}
+	.titles {
+	    color: white;
+	    font-family: 'Roboto';
+	    margin-top: 0.5em;
+	}
+	.button {
+	    background-color: #3596E8; /* Green */
+	    border: 1px solid #350CE8;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    width: 15em;
+	    height:4em;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    float: center;
+	}
+	.button:not(:last-child) {
+	    border-right: none; /* Prevent double borders */
+	}
+	.button:hover {
+	    background-color: #226094;
+	}
+	.texting {
+		color: white;
+		font-family: 'Roboto';
+	}
+	@media only screen and (max-width: 480px) {
+	    .link {
+	        font-size: 15px;
+	    }
+	    .logo {
+	        color: white;
+	    }
+	}
+	.navy {
+	  position: relative;
+	  color: #000;
+	  text-decoration: none;
+	}
+	
+	.navy:hover {
+	  color: #000;
+	}
+	.navy:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 2px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: #000;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+	.navy:hover:before {
+  	  visibility: visible;
+	  -webkit-transform: scaleX(0.25);
+	  transform: scaleX(0.25);
+	}
+	</style>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+    <link rel="icon" type="image/gif" href="img/pin_drop.gif" />	
 </head>
 <body>
+	<nav class="row hones thing">
+		<h1 class="hones logo link navy col-sm mx-auto d-block" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
+		<h1 class="col-sm hones link navy mx-auto d-block" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
+	    <h1 class="col-sm hones link navy mx-auto d-block" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
+	</nav>
+    <div id="buttons">
+        <button id="nuts">Nuts</button>
+        <button id="peanuts">Peanuts</button>
+        <button id="wheat">Wheat</button>
+        <button id="seafood">Seafood</button>
+        <button id="dairy">Dairy</button>
+    </div>
 
-<div id='map'></div>
-<script> 
-mapboxgl.accessToken = 'pk.eyJ1IjoidGhlLXF1YWNrIiwiYSI6ImNqN3Vvd2FtYjQ3MnIycXBrc2l3c2dxNnQifQ.7DS42b3thgYdTvi-b-2kJg';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-96, 37.8], // starting position
-    zoom: 3 // starting zoom
-});
-
-// Add geolocate control to the map.
-map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
-    },
-    trackUserLocation: true
-}));
-/*
-var bounds = [
-    [-125,25], // Southwest coordinates
-    [-70,50]  // Northeast coordinates
-];
-
-mapboxgl.accessToken = 'pk.eyJ1IjoidGhlLXF1YWNrIiwiYSI6ImNqN3Vvd2FtYjQ3MnIycXBrc2l3c2dxNnQifQ.7DS42b3thgYdTvi-b-2kJg';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-97,35],
-    maxBounds: bounds // Sets bounds as max
-   
-});
-map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
-    },
-    trackUserLocation: true
-}));
-map.on('style.load', function () {
-    map.addSource("markers", {
-        "type": "geojson",
-        "data": markers
-    });
-    map.addLayer({
-        "id": "markers",
-        "interactive": true,
-        "type": "symbol",
-        "source": "markers",
-        "layout": {
-            "icon-image": "park-15",
-            "icon-size": 1.25
-        },
-        "paint": {
-            /*"text-size": 10,
-        }
-    });
-    
-});*/
-/*
-map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-}));
-
-map.on('click', function (e) {
-    // Use featuresAt to get features within a given radius of the click event
-    // Use layer option to avoid getting results from other layers
-    map.featuresAt(e.point, {layer: 'markers', radius: 10, includeGeometry: true}, function (err, features) {
-        if (err) throw err;
-        // if there are features within the given radius of the click event,
-        // fly to the location of the click event
-        if (features.length) {
-            // Get coordinates from the symbol and center the map on those coordinates
-            map.flyTo({center: features[0].geometry.coordinates});
-            var featureName = features[0].properties.name;
-            var tooltip = new mapboxgl.Popup()
-                .setLngLat(e.lngLat)
-                .setHTML('<p>' + featureName + '</p>')
-                .addTo(map);
-        }
-    });
-});
-// Use the same approach as above to indicate that the symbols are clickable
-// by changing the cursor style to 'pointer'.
-map.on('mousemove', function (e) {
-    map.featuresAt(e.point, {layer: 'markers', radius: 10}, function (err, features) {
-        if (err) throw err;
-        map.getCanvas().style.cursor = features.length ? 'pointer' : '';
-    });
-});*/
-</script>
-
-
-
+    <div id='map'></div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="allergps.json"></script>
+    <script src='markers/markers.js'></script>
+    <script src='markers/peanuts.js'></script>
+    <script src='markers/dairy.js'></script>
+    <script src='markers/wheat.js'></script>
+    <script src='markers/seafood.js'></script>
+    <script src='js/search.js'></script>
 </body>
 </html>

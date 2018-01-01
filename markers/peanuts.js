@@ -1,4 +1,4 @@
-var nutastic = {
+var peanuts = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -85,21 +85,21 @@ var nutastic = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Blue Coast Grill & Bar",
-        "tel": "(865) 243-2300",
-        "category": "alcohol, bar, restaurant",
-        "address": "37 Market Sq"
+        "title": "Barley's Taproom & Pizzeria",
+         "tel": "(865) 521-0092",
+        "category": "pizza, restaurant",
+        "address": "200 E Jackson Ave"
       },
-      "place_name": "Blue Coast Grill & Bar, 37 Market Sq, Knoxville, Tennessee 37902, United States",
-      "geometry": {
+        "place_name": "Barley's Taproom & Pizzeria, 200 E Jackson Ave, Knoxville, Tennessee 37902, United States",      
+        "geometry": {
         "type": "Point",
         "coordinates": [
-             -83.920301, 
-             35.965754
+          -83.91737, 
+          35.970864
         ]
       }
     },
-    {
+        {
       "type": "Feature",
       "properties": {
         "title": "Burger King",
@@ -184,7 +184,7 @@ var nutastic = {
         ]
       }
     },
-    {
+{
       "type": "Feature",
       "properties": {
         "title": "Chick-Fil-A",
@@ -644,91 +644,6 @@ var nutastic = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Taco Bell",
-        "tel": "(865) 687-5000",
-        "category": "fast food, restaurant",
-        "address": "411 Merchant Dr"
-      },
-      "place_name": "Taco Bell, 411 Merchant Dr, Knoxville, Tennessee 37912, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.97675, 
-          36.008175
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Taco Bell",
-        "tel": "(865) 288-7885",
-        "category": "fast food, restaurant",
-        "address": "401 Lovell Rd"
-      },
-      "place_name": "Taco Bell, 401 Lovell Rd, Knoxville, Tennessee 37934, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.143222, 
-          35.904142
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Taco Bell",
-        "tel": "(865) 769-4754",
-        "category": "fast food, restaurant",
-        "address": "8615 Walbrook Dr"
-      },
-      "place_name": "Taco Bell, 8615 Walbrook Dr, Knoxville, Tennessee 37923, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.067159, 
-          35.92455
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Taco Bell",
-        "tel": "(865) 947-8990",
-        "category": "fast food, restaurant",
-        "address": "6789 Clinton Hwy"
-      },
-      "place_name": "Taco Bell, 6789 Clinton Hwy, Knoxville, Tennessee 37912, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.027667, 
-          36.006749
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Taco Bell",
-        "tel": "(865) 673-5816",
-        "category": "fast food, restaurant",
-        "address": "2085 N Broadway St"
-      },
-      "place_name": "Taco Bell, 2085 N Broadway St, Knoxville, Tennessee 37917, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.920895, 
-          35.99212
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "Tomato Head",
         "tel": "(865) 637-4067",
         "category": "pizza, restaurant",
@@ -844,6 +759,7 @@ var nutastic = {
           35.903658
         ]
       }
-    }  ]
+    }
+]
 };
 

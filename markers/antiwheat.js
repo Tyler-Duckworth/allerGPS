@@ -1,4 +1,4 @@
-var nutastic = {
+var wheat = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -82,20 +82,20 @@ var nutastic = {
         ]
       }
     },
-    {
+     {
       "type": "Feature",
       "properties": {
-        "title": "Blue Coast Grill & Bar",
-        "tel": "(865) 243-2300",
-        "category": "alcohol, bar, restaurant",
-        "address": "37 Market Sq"
+        "title": "Barley's Taproom & Pizzeria",
+         "tel": "(865) 521-0092",
+        "category": "pizza, restaurant",
+        "address": "200 E Jackson Ave"
       },
-      "place_name": "Blue Coast Grill & Bar, 37 Market Sq, Knoxville, Tennessee 37902, United States",
-      "geometry": {
+        "place_name": "Barley's Taproom & Pizzeria, 200 E Jackson Ave, Knoxville, Tennessee 37902, United States",      
+        "geometry": {
         "type": "Point",
         "coordinates": [
-             -83.920301, 
-             35.965754
+          -83.91737, 
+          35.970864
         ]
       }
     },
@@ -181,6 +181,23 @@ var nutastic = {
         "coordinates": [
             -83.924116, 
             35.998057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Crown & Goose",
+        "tel": "(865) 524-2100",
+        "category": "restaurant",
+        "address": "123 S Central St"
+      },
+      "place_name": "The Crown & Goose, 123 S Central St, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.918223, 
+          35.969555
         ]
       }
     },
@@ -391,23 +408,6 @@ var nutastic = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Knox Mason",
-        "tel": "(865) 544-2004",
-        "category": "restaurant",
-        "address": "131 S Gay St"
-      },
-      "place_name": "Knox Mason, 131 S Gay St, Knoxville, Tennessee 37902, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.920363, 
-          35.968192
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "McDonald's",
         "tel": "(865) 637-4148",
         "category": "fast food, restaurant",
@@ -610,40 +610,6 @@ var nutastic = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Sweet P's Barbeque & Soul House",
-        "tel": "(865) 247-7748",
-        "category": "restaurant",
-        "address": "3725 Maryville Pike"
-      },
-      "place_name": "Sweet P's Barbeque & Soul House, 3725 Maryville Pike, Knoxville, Tennessee 37920, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.942925, 
-          35.873651
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Sweet P's Downtown Dive",
-        "tel": "(865) 281-1738",
-        "category": "restaurant",
-        "address": "410 W Jackson Ave"
-      },
-      "place_name": "Sweet P's Downtown Dive, 410 W Jackson Ave, Knoxville, Tennessee 37902, United States",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.921701, 
-          35.967979
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "Taco Bell",
         "tel": "(865) 687-5000",
         "category": "fast food, restaurant",
@@ -729,34 +695,34 @@ var nutastic = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Tomato Head",
-        "tel": "(865) 637-4067",
-        "category": "pizza, restaurant",
-        "address": "12 Market Sq",
+        "title": "The Melting Pot",
+        "tel": "(865) 971-5400",
+        "category": "restaurant",
+        "address": "111 N Central St"
       },
-      "place_name": "Tomato Head, 12 Market Sq, Knoxville, Tennessee 37902, United States",
+      "place_name": "The Melting Pot, 111 N Central St, Knoxville, Tennessee 37902, United States",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -83.919369, 
-          35.965338
+          -83.918628, 
+          35.970656
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "title": "The Tomato Head",
-        "tel": "(865) 584-1075",
-        "category": "pizza, restaurant",
-        "address": "7240 Kingston Pike"
+        "title": "Tupleo Honey",
+        "tel": "(865) 522-0004",
+        "category": "restaurant",
+        "address": "1 Market Square"
       },
-      "place_name": "The Tomato Head, 7240 Kingston Pike, Knoxville, Tennessee 37919, United States",
+      "place_name": "Tupleo Honey, 1 Market Square, Knoxville, Tennessee 37902, United States",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -84.030398, 
-          35.929202
+          -83.919383, 
+          35.964677
         ]
       }
     },

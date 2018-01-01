@@ -61,72 +61,100 @@
     font-family: 'Lato';
     padding-bottom: 0.25em;
     padding-top: 0.25em;
-}
-.thing {
-    background: #B2B2B0;
-    z-index: 999;
-    margin: 0px;
-    position: fixed;
-	padding-bottom: 5em;
-}
-.link a {
-    color: black;
-}
-.link {
-	display: inline-block;
-}
-a {
-    text-decoration: none !important;
-}
-.hones {
-    z-index: 999;
-    max-width: 100%;
-    width: 100%;
-    font-family: 'Lato';
-    padding-bottom: 0.25em;
-    padding-top: 0.25em;
-}
-.section {
-	background-size: cover;
-}
-.titles {
-    color: white;
-    font-family: 'Roboto';
-    margin-top: 0.5em;
-}
-.button {
-    background-color: #3596E8; /* Green */
-    border: 1px solid #350CE8;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 15em;
-    height:4em;
-    border-radius: 10px;
-    cursor: pointer;
-    float: center;
-}
-.button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-}
-.button:hover {
-    background-color: #226094;
-}
-.texting {
-	color: white;
-	font-family: 'Roboto';
-}
-@media only screen and (max-width: 480px) {
-    .link {
-        font-size: 15px;
-    }
-    .logo {
-        color: white;
-    }
-}
+	}
+	.thing {
+	    background: #B2B2B0;
+	    z-index: 999;
+	    margin: 0px;
+	    position: fixed;
+		padding-bottom: 5em;
+	}
+	.link a {
+	    color: black;
+	}
+	.link {
+		display: inline-block;
+	}
+	a {
+	    text-decoration: none !important;
+	}
+	.hones {
+	    z-index: 999;
+	    max-width: 100%;
+	    width: 100%;
+	    font-family: 'Lato';
+	    padding-bottom: 0.25em;
+	    padding-top: 0.25em;
+	}
+	.section {
+		background-size: cover;
+	}
+	.titles {
+	    color: white;
+	    font-family: 'Roboto';
+	    margin-top: 0.5em;
+	}
+	.button {
+	    background-color: #3596E8; /* Green */
+	    border: 1px solid #350CE8;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    width: 15em;
+	    height:4em;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    float: center;
+	}
+	.button:not(:last-child) {
+	    border-right: none; /* Prevent double borders */
+	}
+	.button:hover {
+	    background-color: #226094;
+	}
+	.texting {
+		color: white;
+		font-family: 'Roboto';
+	}
+	@media only screen and (max-width: 480px) {
+	    .link {
+	        font-size: 15px;
+	    }
+	    .logo {
+	        color: white;
+	    }
+	}
+	.navy {
+	  position: relative;
+	  color: #000;
+	  text-decoration: none;
+	}
+	
+	.navy:hover {
+	  color: #000;
+	}
+	.navy:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 2px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: #000;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+	.navy:hover:before {
+  	  visibility: visible;
+	  -webkit-transform: scaleX(0.25);
+	  transform: scaleX(0.25);
+	}
 	</style>
 
 	<!--[if IE]>
@@ -137,45 +165,66 @@ a {
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
 	<script type="text/javascript" src="libs/fullPage/scrolloverflow.js"></script>
-
+	<script type="text/javascript" src="libs/jquery.visible.js"></script>
 	<script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
 	<!--<script type="text/javascript" src="examples.js"></script>-->
 
 	<script type="text/javascript">
-		$(document).ready(function() {
+	function showWhenVis(eleid) {
+		if($(eleid).visible(true)) {
+			if($(eleid).is(":visible") == false) {
+				$(eleid).fadeIn(500);
+			}
+		} else {
+			if($(eleid).is(":visible") == false) {
+				$(eleid).hide(500);
+			}
+		}
+	}
+	$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors: ['firstPage', 'secondPage', '3rdPage', 'fourthPage', 'fifthPage'],
 				navigation: true,
 				slidesNavigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'Mobile', 'Footer']
+				navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'Mobile', 'Footer'],
+				parallax: true,
+				parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+				parallaxOptions: {
+					type: 'reveal',
+					percentage: 62,
+					property: 'translate'
+				},
+				scrollingSpeed: 1000
 			});
 		});
+
 	</script>
 
 </head>
 <body>
 	<nav class="row hones thing">
-		<h1 class="hones logo link col-sm d-block" style="text-align:left; padding-left:1em;"><a href="#!" class="as">Home</a></h1>
-		<h1 class="col-sm hones link mx-auto d-block" style="text-align:right;padding-right:4em;"><a href="explore.html" class="as">Explore</a></h1>
-	    <h1 class="col-sm hones link mx-auto d-block" style="text-align:center;padding-left:1em;"><a href="other/about.html" class="as">About</a></h1>
+		<h1 class="hones logo link navy col-sm mx-auto d-block" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
+		<h1 class="col-sm hones link navy mx-auto d-block" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
+	    <h1 class="col-sm hones link navy mx-auto d-block" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
 	</nav>
 	<div id="fullpage">
-		<div class="section " id="section0 thingie" style="background-image:url('img/homeimage.png')">
+		<div class="section" id="section0 thingie" style="background-image:url('img/homeimage.png')">
+			<div class="fp-bg"></div>
 			<div class="intro">
 				<h1 class="titles" style="font-size:5em;">Welcome to</h1>
-				<img src="img/logo_allerGPS_200.png" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;">
+				<img src="img/logo_allerGPS_200.png" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;" class="yoyo">
 				<br />
-				<div class="margin-top:5em;"><button class="button">Try It Out!</button></div>
+				<div class="margin-top:5em; yoyo"><button class="button">Try It Out!</button></div>
 			</div>
 		</div>
 		<div class="section" id="section1" style="background-color: #74B7D6;">
+			<div class="fp-bg"></div>
 			<div class="intro texting">
-				<h1>What is AllerGPS?</h1>
+				<h1 class="yoy">What is AllerGPS?</h1>
 				<br />
-				<h3>
+				<h3 class="yoy">
 					AllerGPS is a dynamic web application built for those who have allergies that <br />hinder them from eating certain foods. <br /> <br />
 		    		It takes into account these allergies to chart a map of locations that the user can go to <br />and enjoy without worrying about their allergies.
 		    		<br /> <br />
@@ -187,16 +236,17 @@ a {
 		
 		<div class="section" id="section2" style='background-color: #1094FF'>
 		    <div class="slide" id="slide1">
+				<div class="fp-bg"></div>
 				<div class="intro texting">
-					<h1 style="margin-top:1em;">Features</h1>
-			        <div class="row" style="margin-top:5em;">
+					<h1 style="margin-top:1em;" class="yoo">Features</h1>
+			        <div class="row" style="margin-top:5em;" class="yoo">
 			            <div class="col-sm">
 			                <img src="img/restaurant.png" class="minipic mx-auto d-block">
 			            </div><div class="col-sm">
 			                <img src="img/everywhere.png" class="minipic mx-auto d-block">
 			            </div>
 			        </div>
-			        <div class="row" style="margin-top:2em;">
+			        <div class="row" style="margin-top:2em;" class="yoo">
 			            <div class="col-sm">
 			                <h3 class="desch2">AllerGPS uses [insert API name here], <br />
 			            a detailed database of restaurant menus <br />that 
@@ -210,30 +260,33 @@ a {
 			</div>
 	
 		    <div class="slide" id="slide2">
+		    	<div class="fp-bg"></div>
  				<div class="row " style="padding-top:3em;">
 		            <div class="col-sm">
-		                <img src="img/free.png" class="minipic mx-auto d-block">
+		                <img src="img/free.png" class="minipic mx-auto d-block" class="yoo">
 		            </div><div class="col-sm">
-		                <img src="img/variety.png" class="minipic mx-auto d-block">
+		                <img src="img/variety.png" class="minipic mx-auto d-block" class="yoo">
 		            </div>
 		        </div>
 		        <div class="row texting">
 		            <div class="col-sm">
-		                <h3 class="desch2">Unlike other similar services, <br />AllerGPS does not require any fee or sign up <br />for access to its search tool. It is available for free.
+		                <h3 class="desch2 yoo">Unlike other similar services, <br />AllerGPS does not require any fee or sign up <br />for access to its search tool. It is available for free.
 		            </div>
 		            <div class="col-sm">
-		                <h3 class="desch2">AllerGPS offers a wide variety of food allergies <br /> for the user to choose in order to have <br />the best experience possible.</h3>
+		                <h3 class="desch2 yoo">AllerGPS offers a wide variety of food allergies <br /> for the user to choose in order to have <br />the best experience possible.</h3>
 		            </div>
 		        </div>
 			</div>
 	
 		</div>
 		<div class="section" id="section3">
-			<div class="intro">
+			<div class="fp-bg"></div>
+			<div class="intro intrare">
 				<h1>Mobile</h1>
 			</div>
 		</div>
 		<div class="section" id="section4 section-footer" style="background-color:#401F7C;">
+			<div class="fp-bg"></div>
 			<div class="intro">
 				<div class="row" style="color:white;">
         
