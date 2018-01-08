@@ -1,6 +1,23 @@
 var wheat = {
   "type": "FeatureCollection",
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Balter Beerworks",
+        "tel": "(865) 999-5015",
+        "category": "alcohol, bar",
+        "address": "100 S Broadway St"
+      },
+      "place_name": "Balter Beerworks, 100 S Broadway St, Knoxville, Tennessee 37902, United States",      
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              -83.924083,
+              35.966497
+        ]
+      }
+    },
      {
        "type": "Feature",
        "properties": {
@@ -120,6 +137,23 @@ var wheat = {
          ]
        }
      },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stock & Barrel",
+        "tel": "(865) 766-2075",
+        "category": "fast food, restaurant",
+        "address": "35 Market Sq"
+      },
+      "place_name": "Stock & Barrel, 35 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -83.920154,
+            35.965623
+        ]
+      }
+    },
      {
        "type": "Feature",
        "properties": {

@@ -3,19 +3,19 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>AllerGPS</title>
-	<meta name="author" content="Tyler Duckworth" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:thin">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<title>Horizontal navigation dots - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">        
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
 	<meta name="Resource-type" content="Document" />
-	<link rel="icon" type="image/gif" href="../img/pin_drop.gif" />	
+
 
 	<link rel="stylesheet" type="text/css" href="../libs/fullPage/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
 	<!--<link rel="stylesheet" type="text/css" href="examples.css" /> -->
 	<style>
 
@@ -53,7 +53,6 @@
 		color: #fff;
 	}
 	.navbars {
-    z-index: 999;
     position: fixed;
     min-width: 100%;
     margin: 0 auto;
@@ -63,69 +62,20 @@
     padding-top: 0.25em;
 }
 .thing {
+    width: 150%;
     background: #B2B2B0;
     z-index: 999;
     margin: 0px;
-    position: fixed;
 	padding-bottom: 5em;
 }
 .link a {
     color: black;
 }
-.link {
-	display: inline-block;
-}
 a {
     text-decoration: none !important;
 }
-.hones {
-    z-index: 999;
-    max-width: 100%;
-    width: 100%;
-    font-family: 'Lato';
-    padding-bottom: 0.25em;
-    padding-top: 0.25em;
-}
-.section {
-	background-size: cover;
-}
-.titles {
-    color: white;
-    font-family: 'Roboto';
-    margin-top: 0.5em;
-}
-.button {
-    background-color: #3596E8; /* Green */
-    border: 1px solid #350CE8;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 15em;
-    height:4em;
-    border-radius: 10px;
-    cursor: pointer;
-    float: center;
-}
-.button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-}
-.button:hover {
-    background-color: #226094;
-}
-.texting {
-	color: white;
-	font-family: 'Roboto';
-}
-@media only screen and (max-width: 480px) {
-    .link {
-        font-size: 15px;
-    }
-    .logo {
-        color: white;
-    }
+.as {
+     display:inline-block;
 }
 	</style>
 
@@ -146,146 +96,54 @@ a {
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage', 'fourthPage', 'fifthPage'],
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
 				navigation: true,
-				slidesNavigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'Mobile', 'Footer']
+				navigationTooltips: ['First page', 'Second page', 'Third and last page']
 			});
 		});
 	</script>
 
 </head>
 <body>
-	<nav class="row hones thing">
-		<h1 class="hones logo link col-sm d-block" style="text-align:left; padding-left:1em;"><a href="#!" class="as">Home</a></h1>
-		<h1 class="col-sm hones link mx-auto d-block" style="text-align:right;padding-right:4em;"><a href="explore.html" class="as">Explore</a></h1>
-	    <h1 class="col-sm hones link mx-auto d-block" style="text-align:center;padding-left:1em;"><a href="other/about.html" class="as">About</a></h1>
-	</nav>
-	<div id="fullpage">
-		<div class="section " id="section0 thingie" style="background-image:url('../img/homeimage.png')">
-			<div class="intro">
-				<h1 class="titles" style="font-size:5em;">Welcome to</h1>
-				<img src="../img/logo_allerGPS_200.png" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;">
-				<br />
-				<div class="margin-top:5em;"><button class="button">Try It Out!</button></div>
-			</div>
-		</div>
-		<div class="section" id="section1" style="background-color: #74B7D6;">
-			<div class="intro texting">
-				<h1>What is AllerGPS?</h1>
-				<br />
-				<h3>
-					AllerGPS is a dynamic web application built for those who have allergies that <br />hinder them from eating certain foods. <br /> <br />
-		    		It takes into account these allergies to chart a map of locations that the user can go to <br />and enjoy without worrying about their allergies.
-		    		<br /> <br />
-		    		AllerGPS was made to be simple, elegant, and powerful.
-		    		<br /> <br />					
-		    	</h3>			
-		    </div>
-		</div>
-		
-		<div class="section" id="section2" style='background-color: #1094FF'>
-		    <div class="slide" id="slide1">
-				<div class="intro texting">
-					<h1 style="margin-top:1em;">Features</h1>
-			        <div class="row" style="margin-top:5em;">
-			            <div class="col-sm">
-			                <img src="../img/restaurant.png" class="minipic mx-auto d-block">
-			            </div><div class="col-sm">
-			                <img src="../img/everywhere.png" class="minipic mx-auto d-block">
-			            </div>
-			        </div>
-			        <div class="row" style="margin-top:2em;">
-			            <div class="col-sm">
-			                <h3 class="desch2">AllerGPS uses [insert API name here], <br />
-			            a detailed database of restaurant menus <br />that 
-			            include all of your favorite places and more!</h3>
-			            </div>
-			            <div class="col-sm">
-			                <h3 class="desch2">AllerGPS has a fully-functioning map, <br />which means that anyone in the U.S. <br />can access it from anywhere!</h3>
-			            </div>
-			        </div>
-				</div>
-			</div>
-	
-		    <div class="slide" id="slide2">
- 				<div class="row " style="padding-top:3em;">
-		            <div class="col-sm">
-		                <img src="../img/free.png" class="minipic mx-auto d-block">
-		            </div><div class="col-sm">
-		                <img src="../img/variety.png" class="minipic mx-auto d-block">
-		            </div>
-		        </div>
-		        <div class="row texting">
-		            <div class="col-sm">
-		                <h3 class="desch2">Unlike other similar services, <br />AllerGPS does not require any fee or sign up <br />for access to its search tool. It is available for free.
-		            </div>
-		            <div class="col-sm">
-		                <h3 class="desch2">AllerGPS offers a wide variety of food allergies <br /> for the user to choose in order to have <br />the best experience possible.</h3>
-		            </div>
-		        </div>
-			</div>
-	
-		</div>
-		<div class="section" id="section3">
-			<div class="intro">
-				<h1>Mobile</h1>
-			</div>
-		</div>
-		<div class="section" id="section4 section-footer" style="background-color:#401F7C;">
-			<div class="intro">
-				<div class="row" style="color:white;">
-        
-                    <!--First column-->
-                    <div class="col-md-4">
-                        <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold">AllerGPS</h5>
-                        <p>Our Mission: To make the experience of finding food easier for those with allergies.
-                        </p>
-                    </div>
-                    <!--/.First column-->
-        
-                    <hr class="clearfix w-100 d-md-none">
-        
-                    <!--Second column-->
-                    <div class="col-md-2 mx-auto">
-                        <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold">Navigation</h5>
-                        <ul>
-                            <li><a href="#!">Home</a></li>
-                            <li><a href="#!">AllerSearch</a></li>
-                            <li><a href="#!">About Us</a></li>
-                        </ul>
-                    </div>
-                    <!--/.Second column-->
-        
-                    <hr class="clearfix w-100 d-md-none">
-        
-                    <!--Third column-->
-                    <div class="col-md-2 mx-auto">
-                        <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold">Other</h5>
-                        <ul>
-                            <li><a href="#!">Terms of Use</a></li>
-                            <li><a href="#!">Privacy Policy</a></li>
-                            <li><a href="#!">Contact Us</a></li>
-                            <li><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03">Help</a></li>
-                        </ul>
-                    </div>
-                    <!--/.Third column-->
-                </div>
-            </div>
-            <!--/.Footer Links-->
-        
-            <hr>
-            <!--Copyright-->
-            <div class="footer-copyright my-copy">
-                <div class="container-fluid" style="vertical-align:middle;">
-                    &#x24B8; 2018 Copyright: AllerGPS Inc.
-        
-                </div>
-            </div>
-            <!--/.Copyright-->
-			</div>
+            <nav class="row navbars thing" style="background-color:#B2B2B0">
+                <!--Put logo, links, and navbar classes in here.-->
+                <h1 class="navbars logo col-sm" style="text-align:left; padding-left:1em;"><a href="#!">Home</a></h1>
+                
+                <h1 class="col-sm navbars mx-auto" style="text-align:right;padding-right:4em;"><a href="explore.html">Explore</a></h1>
+                <h1 class="col-sm navbars mx-auto" style="text-align:center;padding-left:1em;"><a href="other/about.html">About</a></h1>
+     
+            </nav> 
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>Navigation dots</h1>
+			<p>An easy and beautiful way to navigate throw the sections</p>
 		</div>
 	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Clickable</h1>
+				<p>
+					You can even click on the navigation and jump directly to another section.
+				</p>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2">
+			<h1>Slide 2</h1>
+		</div>
+
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+		</div>
+	</div>
+</div>
+
+
 </body>
 </html>

@@ -510,6 +510,40 @@ var wheat = {
     {
       "type": "Feature",
       "properties": {
+        "title": "Soccer Taco Sports Bar & Tacos",
+        "tel": "(865) 588-2020",
+        "category": "alcohol, bar, restaurant",
+        "address": "6701 Kingston Pike"
+      },
+      "place_name": "Soccer Taco Sports Bar & Tacos, 6701 Kingston Pike, Knoxville, Tennessee 37919, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -84.013315,
+            35.932107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Soccer Taco Sports Bar & Tacos",
+        "tel": "(865) 544-4471",
+        "category": "restaurant",
+        "address": "9 Market Sq"
+      },
+      "place_name": "Soccer Taco, 9 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -83.919786,
+            35.965036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Subway",
         "tel": "(865) 584-0133",
         "category": "fast food, restaurant",

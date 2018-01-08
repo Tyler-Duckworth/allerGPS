@@ -2,192 +2,124 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title></title>
+    <title>AllerGPS - Explore</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
-    <link href='css/index.css' rel='stylesheet' />
+	<link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    <style>
-        body { margin:0; padding:0; }
-        #map { width:500px;height:500px; }
-        a.active {
-            background-color: #3887be;
-            color: #ffffff;
-        }
-    
-        a.active:hover {
-            background: #3074a4;
-        }
-
-	/* Style for our header texts
-	* --------------------------------------- */
-	.fullpage h1{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-	}
-	.intro p{
-		color: #fff;
-	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
-
-	/* Overwriting styles for control arrows for slides
-	* --------------------------------------- */
-	.controlArrow.prev {
-		left: 50px;
-	}
-	.controlArrow.next{
-		right: 50px;
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-	.navbars {
-    z-index: 999;
-    position: fixed;
-    min-width: 100%;
-    margin: 0 auto;
-    margin-right: -10%;
-    font-family: 'Lato';
-    padding-bottom: 0.25em;
-    padding-top: 0.25em;
-	}
-	.thing {
-	    background: #B2B2B0;
-	    z-index: 999;
-	    margin: 0px;
-	    position: fixed;
-		padding-bottom: 5em;
-	}
-	.link a {
-	    color: black;
-	}
-	.link {
-		display: inline-block;
-	}
-	a {
-	    text-decoration: none !important;
-	}
-	.hones {
-	    z-index: 999;
-	    max-width: 100%;
-	    width: 100%;
-	    font-family: 'Lato';
-	    padding-bottom: 0.25em;
-	    padding-top: 0.25em;
-	}
-	.section {
-		background-size: cover;
-	}
-	.titles {
-	    color: white;
-	    font-family: 'Roboto';
-	    margin-top: 0.5em;
-	}
-	.button {
-	    background-color: #3596E8; /* Green */
-	    border: 1px solid #350CE8;
-	    color: white;
-	    padding: 15px 32px;
-	    text-align: center;
-	    text-decoration: none;
-	    display: inline-block;
-	    font-size: 16px;
-	    width: 15em;
-	    height:4em;
-	    border-radius: 10px;
-	    cursor: pointer;
-	    float: center;
-	}
-	.button:not(:last-child) {
-	    border-right: none; /* Prevent double borders */
-	}
-	.button:hover {
-	    background-color: #226094;
-	}
-	.texting {
-		color: white;
-		font-family: 'Roboto';
-	}
-	@media only screen and (max-width: 480px) {
-	    .link {
-	        font-size: 15px;
-	    }
-	    .logo {
-	        color: white;
-	    }
-	}
-	.navy {
-	  position: relative;
-	  color: #000;
-	  text-decoration: none;
-	}
-	
-	.navy:hover {
-	  color: #000;
-	}
-	.navy:before {
-	  content: "";
-	  position: absolute;
-	  width: 100%;
-	  height: 2px;
-	  bottom: 0;
-	  left: 0;
-	  background-color: #000;
-	  visibility: hidden;
-	  -webkit-transform: scaleX(0);
-	  transform: scaleX(0);
-	  -webkit-transition: all 0.3s ease-in-out 0s;
-	  transition: all 0.3s ease-in-out 0s;
-	}
-	.navy:hover:before {
-  	  visibility: visible;
-	  -webkit-transform: scaleX(0.25);
-	  transform: scaleX(0.25);
-	}
-	</style>
-
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="icon" type="image/gif" href="img/pin_drop.gif" />	
-</head>
-<body>
-	<nav class="row hones thing">
-		<h1 class="hones logo link navy col-sm mx-auto d-block" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
-		<h1 class="col-sm hones link navy mx-auto d-block" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
-	    <h1 class="col-sm hones link navy mx-auto d-block" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
-	</nav>
-    <div id="buttons">
-        <button id="nuts">Nuts</button>
-        <button id="peanuts">Peanuts</button>
-        <button id="wheat">Wheat</button>
-        <button id="seafood">Seafood</button>
-        <button id="dairy">Dairy</button>
-    </div>
+    <link rel="stylesheet" type="text/css" href="css/general.css"/>
 
-    <div id='map'></div>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="allergps.json"></script>
+    <style>
+        body { margin:0; padding:0; }
+        #map { width:100%;height:500px; }
+        .explore {
+        	padding-top: 5em;
+        }
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+<body class="bod">
+	<nav class="thing hones">
+		<div class="nav-wrapper">
+		  <div class="row navth">
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			<h1 class="hones logo links navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>
+			<h1 class="col hones links navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="#!" class="as">Explore</a></h1>
+			<h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
+		  </div>
+		  <ul class="side-nav sidle" id="mobile-demo">
+			<li><h1 class="hones logo link" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>			</li>
+			<li><h1 class="hones link" style="text-align:center;"><a href="#" class="as">Explore</a></h1>			</li>
+			<li><h1 class="hones link" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>			</li>
+		  </ul>
+		</div>
+	  </nav>
+	<div class="explore">
+	    <div id="buttons">
+	        <button id="nuts">Nuts</button>
+	        <button id="peanuts">Peanuts</button>
+	        <button id="wheat">Wheat</button>
+	        <button id="seafood">Seafood</button>
+	        <button id="dairy">Dairy</button>
+	    </div>
+	
+	    <div id='map'></div>
+            <div class="section" id="section5 section-footer" style="background-color:#7791C2;">
+    			<div class="fp-bg"></div>
+    			<div class="intro">
+    				<div class="row" style="color:#F9F7F7;">
+            
+                        <!--First column-->
+                        <div class="col-md-4">
+                            <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold wow fadeInDown">AllerGPS</h5>
+                            <p class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">Our Mission: To make the experience of finding food easier for those with allergies.
+                            </p>
+                        </div>
+                        <!--/.First column-->
+            
+                        <hr class="clearfix w-100 d-md-none">
+            
+                        <!--Second column-->
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-3 ml-4 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
+                            <ul>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="../index.html" style="color:white;">Home</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="#" style="color:white;">AllerSearch</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
+                            </ul>
+                        </div>
+                        <!--/.Second column-->
+            
+                        <hr class="clearfix w-100 d-md-none">
+            
+                        <!--Third column-->
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
+                            <ul>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/contact.html" style="color:white;">Contact Us</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
+                            </ul>
+                        </div>
+                        <!--/.Third column-->
+                    </div>
+                </div>
+                <!--/.Footer Links-->
+            
+                <hr width="75%">
+                <!--Copyright-->
+                <div class="footer-copyright my-copy" style="color:#F9F7F7;">
+                    <div class="container-fluid wow fadeInUp" data-wow-delay="4s" style="vertical-align:middle;">
+                        &#x24B8; 2018 Copyright: AllerGPS Inc.
+            
+                    </div>
+                </div>
+            <!--/.Copyright-->
+			</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="markers/allergps.json"></script>
     <script src='markers/markers.js'></script>
     <script src='markers/peanuts.js'></script>
     <script src='markers/dairy.js'></script>
     <script src='markers/wheat.js'></script>
     <script src='markers/seafood.js'></script>
-    <script src='js/search.js'></script>
+    <script src="libs/wow.js"></script>
+    <script src="js/search.js"></script>
+	<script>
+		new WOW().init();
+	 </script>
 </body>
 </html>

@@ -1,0 +1,210 @@
+	/* Style for our header texts
+	* --------------------------------------- */
+	.fullpage h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p, h1, h3{
+		color: #fff;
+		font-weight:100;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	.navbars {
+    z-index: 999;
+    position: fixed;
+    min-width: 100%;
+    margin: 0 auto;
+    margin-right: -10%;
+    font-family: 'Lato';
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+	}
+	.thing {
+	    background: #5A6D92;
+	    z-index: 999;
+	    margin: 0px;
+	    height: 2.5em;
+	    position: fixed;
+		padding-bottom: 5em;
+	}
+	.links a {
+	    color: #f9f7f7;
+	}
+	.links {
+		display: inline-block;
+	}
+	.links a:hover {
+		color: #fff;
+	}
+	.link a {
+	    color: #f9f7f7;
+	}
+	.link {
+		display: inline-block;
+	}
+	.link a:hover {
+		color: #fff;
+	}
+	a {
+	    text-decoration: none !important;
+	}
+	.hones {
+	    z-index: 999;
+	    max-width: 100%;
+	    width: 100%;
+		font-size: 175%;
+		font-family: brandon-grotesque, sans-serif;
+		font-style: normal;
+		font-weight: 100;
+	    padding-bottom: 0.1em;
+	    padding-top: 0.3em;
+		margin: 0 auto;
+
+	}
+	.section {
+		background-size: cover;
+	}
+	.titles {
+	    color: white;
+	    font-family: 'Roboto';
+	    margin-top: 0.75em;
+	}
+	.button {
+	    background-color: #3596E8; /* Green */
+	    border: 1px solid #350CE8;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    width: 15em;
+	    height:4em;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    float: center;
+	}
+	.button:not(:last-child) {
+	    border-right: none; /* Prevent double borders */
+	}
+	.button:hover {
+	    background-color: #226094;
+	}
+	.texting {
+		color: white;
+		font-family: 'Roboto';
+	}
+	.descr {
+		font-size:175%;
+	}
+	.descrr {
+		font-size:175%;
+	}
+	@media only screen and (max-width: 1100px) {
+	    .links {
+	        font-size: 0px;
+	    }
+	    .logo {
+	        color: white;
+	    }
+		.navy {
+			visibility: hidden;
+		}
+		.whothy {
+			size:150%;
+		}
+		.descr {
+			font-size:130%;
+			margin-top: -10%;
+		}
+		.descrr {
+			font-size:130%;
+			margin-top: 0;
+		}
+		.minipic {
+			margin-top: -20%;
+			width: 75%;
+			height: 125%
+		}
+	}
+	.navy {
+	  position: relative;
+	  color: #fff;
+	  text-decoration: none;
+	}
+	.link {
+		font-size: 200%;
+	}
+	.navy:hover {
+	  color: #fff;
+	}
+	.navy:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 2px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: #fff;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+	.navy:hover:before {
+  	  visibility: visible;
+	  -webkit-transform: scaleX(0.25);
+	  transform: scaleX(0.25);
+	}
+	.navy {
+	  position: relative;
+	  color: #fff;
+	  text-decoration: none;
+	}
+	
+	.navg:hover {
+	  color: #fff;
+	}
+    .wow:first-child {
+      visibility: hidden;
+    }
+    .github {
+    	width: 50%;
+    	height: 50%;
+		animation-duration: 2.5s;
+	    animation-fill-mode: both;
+   	    animation-iteration-count: infinite;
+    }
+	.sidle {
+		background-color:#7791C2;
+	}
+	#section2 {
+		padding-bottom: 0;
+	}
+	.mobars:hover {
+    	color: #58A5CF;
+	}

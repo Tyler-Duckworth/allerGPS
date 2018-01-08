@@ -187,6 +187,23 @@ var antidairy = {
     {
       "type": "Feature",
       "properties": {
+        "title": "Cafe 4",
+        "tel": "(865) 544-4144",
+        "category": "restaurant",
+        "address": "4 Market Sq"
+      },
+      "place_name": "Cafe 4, 4 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              -83.91947,
+              35.965277
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Chick-Fil-A",
         "tel": "(865) 588-0100",
         "category": "fast food, restaurant",
@@ -520,6 +537,57 @@ var antidairy = {
         "coordinates": [
           -83.919383, 
           35.964677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stock & Barrel",
+        "tel": "(865) 766-2075",
+        "category": "fast food, restaurant",
+        "address": "35 Market Sq"
+      },
+      "place_name": "Stock & Barrel, 35 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -83.920154,
+            35.965623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Soccer Taco Sports Bar & Tacos",
+        "tel": "(865) 588-2020",
+        "category": "alcohol, bar, restaurant",
+        "address": "6701 Kingston Pike"
+      },
+      "place_name": "Soccer Taco Sports Bar & Tacos, 6701 Kingston Pike, Knoxville, Tennessee 37919, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -84.013315,
+            35.932107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Soccer Taco Sports Bar & Tacos",
+        "tel": "(865) 544-4471",
+        "category": "restaurant",
+        "address": "9 Market Sq"
+      },
+      "place_name": "Soccer Taco, 9 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -83.919786,
+            35.965036
         ]
       }
     },

@@ -4,6 +4,23 @@ var dairy = {
     {
       "type": "Feature",
       "properties": {
+        "title": "Balter Beerworks",
+        "tel": "(865) 999-5015",
+        "category": "alcohol, bar",
+        "address": "100 S Broadway St"
+      },
+      "place_name": "Balter Beerworks, 100 S Broadway St, Knoxville, Tennessee 37902, United States",      
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              -83.924083,
+              35.966497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Blue Coast Grill & Bar",
         "tel": "(865) 243-2300",
         "category": "alcohol, bar, restaurant",

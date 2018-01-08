@@ -17,6 +17,23 @@ var antiseafood = {
              35.965754
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cafe 4",
+        "tel": "(865) 544-4144",
+        "category": "restaurant",
+        "address": "4 Market Sq"
+      },
+      "place_name": "Cafe 4, 4 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              -83.91947,
+              35.965277
+        ]
+      }
     }
 ]
 };

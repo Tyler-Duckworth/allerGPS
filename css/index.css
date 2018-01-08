@@ -115,7 +115,7 @@ body {
         linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, 
         linear-gradient(63deg, transparent 74%, #999 78%), 
         linear-gradient(63deg, transparent 34%, #999 38%, #fff 58%, transparent 62%), 
-        #74B7D6;
+        #5A6D92;
         background-size: 16px 48px;
 
 }
@@ -190,14 +190,23 @@ body {
     text-align: center;
 }
 .strapthatboot {
-    width: 10%;
-    height:10%;
+    width: 20%;
+    height:20%;
+    margin-left:40%;
+    padding-top:1em;
+    padding-bottom:1em;
     display:block;
+    animation-duration: 2.5s;
+	animation-fill-mode: both;
+   	animation-iteration-count: infinite;
 }
 
 .boxthatmap {
-    width: 35%;
-    height: 35%;
+    width: 50%;
+    height: 30%;
+    margin-left:25%;
+    padding-top:1em;
+    padding-bottom:1em;
     display:block;
 }
 .divbacks p {

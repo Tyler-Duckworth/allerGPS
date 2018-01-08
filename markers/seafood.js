@@ -82,6 +82,23 @@ var seafood = {
         ]
       }
     },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Balter Beerworks",
+        "tel": "(865) 999-5015",
+        "category": "alcohol, bar",
+        "address": "100 S Broadway St"
+      },
+      "place_name": "Balter Beerworks, 100 S Broadway St, Knoxville, Tennessee 37902, United States",      
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              -83.924083,
+              35.966497
+        ]
+      }
+    },
      {
       "type": "Feature",
       "properties": {
@@ -607,6 +624,57 @@ var seafood = {
         "coordinates": [
           -84.166649, 
           35.898381 
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Soccer Taco Sports Bar & Tacos",
+        "tel": "(865) 588-2020",
+        "category": "alcohol, bar, restaurant",
+        "address": "6701 Kingston Pike"
+      },
+      "place_name": "Soccer Taco Sports Bar & Tacos, 6701 Kingston Pike, Knoxville, Tennessee 37919, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -84.013315,
+            35.932107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Soccer Taco Sports Bar & Tacos",
+        "tel": "(865) 544-4471",
+        "category": "restaurant",
+        "address": "9 Market Sq"
+      },
+      "place_name": "Soccer Taco, 9 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -83.919786,
+            35.965036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stock & Barrel",
+        "tel": "(865) 766-2075",
+        "category": "fast food, restaurant",
+        "address": "35 Market Sq"
+      },
+      "place_name": "Stock & Barrel, 35 Market Sq, Knoxville, Tennessee 37902, United States",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -83.920154,
+            35.965623
         ]
       }
     },

@@ -152,5 +152,33 @@
     "Peanuts" : 1,
     "Seafood" : 0.5,
     "Wheat" : 0
+  },
+  "Balter Beerworks" : {
+    "Dairy" : 0.5,
+    "Nuts" : 0.75,
+    "Peanuts" : 0.75,
+    "Seafood" : 0.5,
+    "Wheat" : 0
+  },
+  "The Stock & Barrel" : {
+    "Dairy" : 0.25,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.75,
+    "Seafood" : 0.75,
+    "Wheat" : 0.5
+  },
+  "Soccer Taco" : {
+    "Dairy" : 0,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.5,
+    "Seafood" : 0.5,
+    "Wheat" : 0.25
+  },
+  "Cafe 4" : {
+    "Dairy" : 0,
+    "Nuts" : 0.5,
+    "Peanuts" : 0.5,
+    "Seafood" : 0.25,
+    "Wheat" : 0.5
   }
 }
