@@ -23,7 +23,7 @@
 		
 		<!--Links to the CSS Style Sheets we use for pages, and libraries-->
 		
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
+		<link href="libs/bootstrap/font-awesome.min.css" rel="stylesheet">        
 	    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		
 		<link rel="stylesheet" type="text/css" href="css/general.css"/>
@@ -68,6 +68,17 @@
 					$(".button-collapse").sideNav();
 				});
 		</script>
+		<style>
+			.logo {
+				animation-duration: 2.5s;
+			    animation-fill-mode: both;
+			}
+			.scrolldown {
+				animation-duration: 2.5s;
+			    animation-fill-mode: both;
+			    animation-delay: 2.5s;
+			}
+		</style>
 		
 	</head>
 	
@@ -92,15 +103,15 @@
 			  <div class="row navth">
 			  	
 				<a href="#" data-activates="mobile-demo" class="button-collapse mobars"><i class="fa fa-bars fa-4 mobars" aria-hidden="true"></i></a>
-				<h1 class="hones logo links navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
-				<h1 class="col hones links navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
-				<h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
+				<h1 class="hones logo link navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
+				<h1 class="col hones link navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
+				<h1 class="col hones link navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
 			  
 			  </div>
 			  
 			  <!--Mobile Pullout Navbar-->
 			  
-			  <ul class="side-nav sidle" id="mobile-demo" style="background-color:#7791C2;">
+			  <ul class="side-nav sidle" id="mobile-demo">
 				<li><h1 class="hones logo link" style="text-align:center;"><a href="#!" class="as mobil">Home</a></h1>			</li>
 				<li><h1 class="hones link" style="text-align:center;"><a href="explore.html" class="as mobil">Explore</a></h1>			</li>
 				<li><h1 class="hones link" style="text-align:center;"><a href="other/about.html" class="as mobil">About</a></h1>			</li>
@@ -113,14 +124,14 @@
 		All WOW.js animations are written to fire sequentially.-->
 		
 		<div id="fullpage">
-			s
+			
 			<!--Title section with logo and button to take you to AllerSearch-->
 			
-			<div class="section" id="section0 thingie" style="background-color:white;">
+			<div class="section" id="section0 thingie" style="background-color: white;)">
 				
 				<div class="intro">
 					<h1 class="titles wow fadeIn" data-wow-duration="3s" style="font-size:5em; font-family:'Roboto';">Welcome To</h1>
-					<img src="img/logo_allerGPS_200.png"  data-wow-delay="1s" data-wow-duration="2s" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;" class="logo jackInTheBox">
+					<img src="img/logo_allerGPS_200.png"  data-wow-delay="1s" data-wow-duration="2s" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;" class="logo slideInLeft">
 					<br />
 					<img src="img/scroll.gif" width="10%" class="scrolldown bounceIn">
 				</div>

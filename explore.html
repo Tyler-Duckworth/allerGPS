@@ -1,125 +1,221 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8' />
-    <title>AllerGPS - Explore</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
-	<link rel="stylesheet" href="libs/animate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
-    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="icon" type="image/gif" href="img/pin_drop.gif" />	
-    <link rel="stylesheet" type="text/css" href="css/general.css"/>
+    <head>
+            <title>AllerGPS - Explore</title>
+            
+    		<!-- Metadata tags for browsers-->
+    		
+    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    		<meta name="author" content="Tyler Duckworth" />
+    		<meta name="Resource-type" content="Document" />
+    		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    		
+    		<!--Favicon Code-->
+    		
+    		<link rel="icon" type="image/gif" href="img/pin_drop.gif" />
+    		
+    		<!--CSS-->
+    		
+        	<link rel="stylesheet" href="libs/wowjs/animate.css">
+        	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+            <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+            <link rel="stylesheet" type="text/css" href="css/general.css"/>
+    		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
 
-    <style>
-        body { margin:0; padding:0; }
-        #map { width:100%;height:500px; }
-        .explore {
-        	padding-top: 5em;
-        }
-	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-</head>
-<body class="bod">
-	<nav class="thing hones">
-		<div class="nav-wrapper">
-		  <div class="row navth">
-			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
-			<h1 class="hones logo links navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>
-			<h1 class="col hones links navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="#!" class="as">Explore</a></h1>
-			<h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
-		  </div>
-		  <ul class="side-nav sidle" id="mobile-demo">
-			<li><h1 class="hones logo link" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>			</li>
-			<li><h1 class="hones link" style="text-align:center;"><a href="#" class="as">Explore</a></h1>			</li>
-			<li><h1 class="hones link" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>			</li>
-		  </ul>
-		</div>
-	  </nav>
-	<div class="explore">
-	    <div id="buttons">
-	        <button id="nuts">Nuts</button>
-	        <button id="peanuts">Peanuts</button>
-	        <button id="wheat">Wheat</button>
-	        <button id="seafood">Seafood</button>
-	        <button id="dairy">Dairy</button>
-	    </div>
-	
-	    <div id='map'></div>
-            <div class="section" id="section5 section-footer" style="background-color:#7791C2;">
-    			<div class="fp-bg"></div>
-    			<div class="intro">
-    				<div class="row" style="color:#F9F7F7;">
-            
-                        <!--First column-->
-                        <div class="col-md-4">
-                            <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold wow fadeInDown">AllerGPS</h5>
-                            <p class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">Our Mission: To make the experience of finding food easier for those with allergies.
-                            </p>
+    
+    		<!--JavaScript-->
+    	
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    		
+    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    		
+            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+            <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+        	
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+        <style>
+            body { margin:0; padding:0; }
+            #map { width:100%;height:500px; }
+            .explore {
+            	padding-top: 5em;
+            }
+    	</style>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </head>
+    
+    <body class="bod">
+        
+    	<!--Navbar, fixed and mobily enabled-->
+    		
+    	<nav class="thing hones">
+    		<div class="nav-wrapper">
+    		  <div class="row navth">
+    			  	
+    			<a href="#" data-activates="mobile-demo" class="button-collapse mobars"><i class="fa fa-bars fa-4 mobars" aria-hidden="true"></i></a>
+    			<h1 class="hones logo link navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>
+    			<h1 class="col hones link navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="#" class="as">Explore</a></h1>
+    			<h1 class="col hones link navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
+    			  
+    		  </div>
+    			  
+    		  <!--Mobile Pullout Navbar-->
+    			  
+    		  <ul class="side-nav sidle" id="mobile-demo" style="background-color:#7791C2;">
+    			<li><h1 class="hones logo link" style="text-align:center;"><a href="index.html" class="as mobil">Home</a></h1></li>
+    			<li><h1 class="hones link" style="text-align:center;"><a href="#" class="as mobil">Explore</a></h1></li>
+    			<li><h1 class="hones link" style="text-align:center;"><a href="other/about.html" class="as mobil">About</a></h1></li>
+    		  </ul>
+    			  
+    		</div>
+    	</nav>
+    		  
+            <!--
+            Start of webpage content.
+    		--> 
+    		
+            <div class="explore">
+        	    
+        	    <!--Instructions on how to work the website.-->
+        	    
+        	    <div class="instruct">
+        	        <h1 style="font-size: 200%;text-align:center;">Instructions</h1>
+        	        <ol style="padding-left:5em">
+        	            <li><p style="font-size: 150%">Click the Geolocate button in the top right hand corner of the map.</p></li>
+        	            <li><p style="font-size: 150%">Click one of the buttons. If you can't see anything, zoom out.</p></li>
+        	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
+        	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
+        	            <li><p style="font-size: 150%">If you can't see an allergy, press the Clear button and press the allergy's button again!</p></li>
+        	        </ol>
+        	        
+        	        
+        	        
+        	        
+        	        <!--
+        	        1. Click the Geolocate button in the top right hand corner of the map.
+        	        2. Click one of the buttons. If you can't see anything, zoom out.
+        	        3. Feel free to stack layers on top of each other. 
+        	        4. If you can't see a layer, press the Clear button.
+        	        -->
+        	    </div>
+        	    
+        	    <!--Buttons that trigger the plots on the map. Each allergy is -->
+        	    
+        	    <div id="buttons">
+        	        <button id="nuts">Nuts</button>
+        	        <button id="peanuts">Peanuts</button>
+        	        <button id="wheat">Wheat</button>
+        	        <button id="seafood">Seafood</button>
+        	        <button id="dairy">Dairy</button>
+        	        <button id="clear">Clear</button>
+        	    </div>
+        	
+        	    <div id='map'></div>
+        	    
+                <div class="section mobfo" id="section5 section-footer" style="background-color:#7791C2;">
+                    
+            		<div class="intro">
+            			<div class="row" style="color:#F9F7F7;">
+                    
+                            <!--First column-->
+                            
+                            <div class="col-md-4">
+                                <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold wow fadeInDown">AllerGPS</h5>
+                                <p class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">Our Mission: To make the experience of finding food easier for those with allergies.
+                                </p>
+                            </div>
+    
+                            <hr class="clearfix w-100 d-md-none">
+                
+                            <!--Second column-->
+                            
+                            <div class="col-md-2 mx-auto">
+                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-2 ml-4 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
+                                <ul>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="index.html" style="color:white;">Home</a></li>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="#" style="color:white;">AllerSearch</a></li>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
+                                </ul>
+                            </div>
+    
+                            <hr class="clearfix w-100 d-md-none">
+                    
+                            <!--Third column-->
+                            
+                            <div class="col-md-2 mx-auto">
+                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-2 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
+                                <ul>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/contact.html" style="color:white;">Contact Us</a></li>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <!--/.First column-->
-            
-                        <hr class="clearfix w-100 d-md-none">
-            
-                        <!--Second column-->
-                        <div class="col-md-2 mx-auto">
-                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-3 ml-4 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
-                            <ul>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="../index.html" style="color:white;">Home</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="#" style="color:white;">AllerSearch</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
-                            </ul>
-                        </div>
-                        <!--/.Second column-->
-            
-                        <hr class="clearfix w-100 d-md-none">
-            
-                        <!--Third column-->
-                        <div class="col-md-2 mx-auto">
-                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
-                            <ul>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/contact.html" style="color:white;">Contact Us</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
-                            </ul>
-                        </div>
-                        <!--/.Third column-->
                     </div>
-                </div>
-                <!--/.Footer Links-->
-            
-                <hr width="75%">
-                <!--Copyright-->
-                <div class="footer-copyright my-copy" style="color:#F9F7F7;">
-                    <div class="container-fluid wow fadeInUp" data-wow-delay="4s" style="vertical-align:middle;">
-                        &#x24B8; 2018 Copyright: AllerGPS Inc.
-            
+    
+                    <hr width="75%">
+                    
+                    <!--Copyright-->
+                    
+                    <div class="footer-copyright my-copy" style="color:#F9F7F7;">
+                        <div class="container-fluid wow fadeInUp" data-wow-delay="4s" style="vertical-align:middle;">
+                            &#x24B8; 2018 Copyright: AllerGPS Inc.
+                        </div>
                     </div>
-                </div>
-            <!--/.Copyright-->
-			</div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="markers/allergps.json"></script>
-    <script src='markers/markers.js'></script>
-    <script src='markers/peanuts.js'></script>
-    <script src='markers/dairy.js'></script>
-    <script src='markers/wheat.js'></script>
-    <script src='markers/seafood.js'></script>
-    <script src="libs/wow.js"></script>
-    <script src="js/search.js"></script>
-	<script>
-		new WOW().init();
-	 </script>
-</body>
+        		</div>
+            </div>
+            
+            
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+        
+        <!--Links to the GeoJSON and JSON files that contain geographic data.
+            GeoJSON Sample:
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "title": "Sweet P's Downtown Dive", <-- The name of the restaurant for the popup to display
+                    "tel": "(865) 281-1738", <-- The telephone number of the restaurant at that location
+                    "category": "restaurant",
+                    "address": "410 W Jackson Ave" <-- The address of the restaurant at that location
+                  },
+                  "place_name": "Sweet P's Downtown Dive, 410 W Jackson Ave, Knoxville, Tennessee 37902, United States",
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -83.921701, <--\ These numbers are longitude and latitude that we use to plot the point on the map.
+                      35.967979   <--/
+                    ]
+                  }
+                },
+        -->
+        
+        <script src="markers/allergps.json"></script>
+        <script src='markers/markers.js'></script>
+        <script src='markers/peanuts.js'></script>
+        <script src='markers/dairy.js'></script>
+        <script src='markers/wheat.js'></script>
+        <script src='markers/seafood.js'></script>
+        
+        <!--
+            search.js is the main script that creates the map and more. 
+            If you want to know more, see the full documentation in search.js
+        -->
+        
+        <script src="js/search.js"></script>
+        
+		<!--Essential WOW.js code that enables all of the when-visible animations-->
+        
+        <script src="libs/wowjs/wow.js"></script>
+        
+    	<script>
+    		new WOW().init();
+    	 </script>
+    </body>
 </html>
