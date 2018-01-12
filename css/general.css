@@ -124,6 +124,11 @@
 
 /*Alterations to elements for mobile screen*/
 	 @media only screen and (max-width: 1100px) {
+		.paddsides {
+			padding-left: 5%;
+			padding-top: 2em;
+			padding-right: 5%;
+		}
 	    /*Navbar styling to hide nav while in mobile mode*/
 	     .links {
 	         font-size: 0px;
@@ -200,7 +205,7 @@
 	 .title h1 {
 	     padding-top: 2em;
 	}
-	 .button {
+	 .ints {
 	     background-color: #3596E8;
 	    /* Green */
 	     border: 1px solid #350CE8;
@@ -216,9 +221,21 @@
 	     cursor: pointer;
 	     float: center;
 	}
-	 .button:not(:last-child) {
-	     border-right: none;
-	    /* Prevent double borders */
+	 .int {
+	     background-color: #3596E8;
+	    /* Green */
+	     border: 1px solid #350CE8;
+	     color: white;
+	     padding: 15px 32px;
+	     text-align: center;
+	     text-decoration: none;
+	     display: inline-block;
+	     font-size: 16px;
+	     width: 15em;
+	     height:4em;
+	     border-radius: 10px;
+	     cursor: pointer;
+	     float: center;
 	}
 	/*.button:hover {
 	     background-color: #226094;
@@ -398,3 +415,4 @@
 	     animation-duration: 2.5s;
 	     animation-fill-mode: both;
 	}
+

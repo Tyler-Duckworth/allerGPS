@@ -52,8 +52,7 @@
               var popup = new mapboxgl.Popup({ closeOnClick: false })
                 .setLngLat(currentFeature.geometry.coordinates)
                 .setHTML('<p>' + currentFeature.properties.title + '</p>' +
-                  '<p>' + currentFeature.properties.address + '</p>')
-                .addTo(map);
+                  '<p>' + currentFeature.properties.address + '</p>' + '<p>' + currentFeature.properties.tel + '</p>').addTo(map);
             }
             
         /*
@@ -64,6 +63,7 @@
         */
             
             function onClicks(g, lyrname) {
+                
                 if(map.getLayer(lyrname)) {
                     var features = map.queryRenderedFeatures(g.point, { layers: [lyrname]});
                     if (features.length) {
@@ -82,11 +82,11 @@
             It first check to see if the button is active, and then checks to see if a layer exists.
             If the layer doesn't exist, it adds the layer.
         */
-        
+        var markers = [];
             function toggleLayers(clss, color, geojsn) {
                     if(!map.getSource(clss)) {
                         console.log("Adding source " + clss + " now..");
-                        /*map.addLayer({
+                        map.addLayer({
                             'id': clss,
                             'type': 'circle',
                             "source": {
@@ -97,31 +97,28 @@
                                 'circle-radius': 9,
                                 'circle-color': '#fff'
                             }
-                        });*/
-                        map.addSource(clss, {
-                            'type' : 'geojson',
-                            'data' : geojsn
                         });
-                        geojsn.features.forEach(function(marker) {
-                            console.log(marker);
-                            var el = document.createElement('div');
-                            el.className = clss;
-                            console.log(el);
-                            
-                            new mapboxgl.Marker(el)
-                              .setLngLat(marker.geometry.coordinates)
-                              
-                              .addTo(map);
+                         map.addLayer({
+                            'id': clss+'-halo',
+                            'type': 'circle',
+                            "source": {
+                                "type": "geojson",
+                                "data": geojsn
+                            },
+                            'paint': {
+                                'circle-radius': 7,
+                                'circle-color': color
+                            }
                         });
                         $('#'+clss).addClass('active');
                     } else {
-                        /*
+                        
                         console.log(map.getLayoutProperty(clss, 'visibility'));
                         if(map.getLayoutProperty(clss, 'visibility') == "none") {
                             console.log("Changing visibility now");
                             map.setLayoutProperty(clss, 'visibility', 'visible');
                             map.setLayoutProperty(clss+"-halo", 'visibility', 'visible');
-                        }*/
+                        }
                         $('#'+clss).addClass('active');
                     }
             }
@@ -172,29 +169,28 @@
         */
         
             $('#nuts').click(function() {
-                toggleLayers("nuts", '#48f3ba', nutastic);
+                toggleLayers("nuts", '#FF2F4A', nutastic);
                 console.log("Well nuts....");
             });
             
             $('#peanuts').click(function() {
-                toggleLayers("peanuts", '#b082b2', peanuts);
+                toggleLayers("peanuts", '#D1681D', peanuts);
             });
             
             $('#wheat').click(function() {
-                toggleLayers("wheat", '#5a330d', wheat)
+                toggleLayers("wheat", '#E9B200', wheat)
             });
             
             $('#seafood').click(function() {
-                toggleLayers("seafood", '#4adc7b', seafood);
+                toggleLayers("seafood", '#005AFF', seafood);
             });
             
             $('#dairy').click(function() {
-                toggleLayers("dairy", '#0086b3', dairy);
+                toggleLayers("dairy", '#60B0F4', dairy);
             });
             $('#clear').click(function() {
                 clearLayer();
             });
-        
         // Add an event listener for when a user clicks on the map. It then calls the function that creates the popup and zoom-in effect.
         
             map.on('click', function(e) {

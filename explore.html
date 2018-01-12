@@ -45,12 +45,21 @@
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     
         <style>
+            .int {
+                margin-top: 1%;
+                margin-bottom: 1%;
+                margin-left: 38%;
+            }
+            .ints {
+                margin-top: 1%;
+                margin-bottom: 1%;
+                margin-left: 38%;
+            }
             body { margin:0; padding:0; }
             #map { width:100%;height:45rem; }
             .explore {
             	padding-top: 5em;
             }
-            
             .peanuts {
               background-image: url('img/markers/peanut.png');
               background-size: cover;
@@ -91,7 +100,17 @@
               border-radius: 50%;
               cursor: pointer;
             }
-
+            .pc:hover {
+                cursor: pointer;
+            }
+            .che {
+                margin-top:-1%;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            .pic {
+                width: 20%;
+                height: 20%;
+            }
             @media only screen and (max-width: 1100px) {
                 .pl-4 {
                     padding-left:5rem!important;
@@ -101,6 +120,28 @@
                 }
                 .grades {
                     font-size:150%;
+                }
+                .che {
+                    margin-top:-2%;
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+                .pic {
+                    max-width: 100%;
+                    max-height: auto;
+                }
+                .ints {
+                     margin-top:1em;
+            	     width: 10em;
+            	     height:3em;
+                }
+                .int {
+                     margin-top:1em;
+            	     width: 10em;
+            	     height:3em;
+                }
+                #buttons {
+                    padding-top: 1em;
+                    margin-left: -6em;
                 }
             }
         </style>
@@ -156,20 +197,20 @@
     		--> 
     		
             <div class="explore">
-        	    
-        	    <!--Instructions on how to work the website are made possible with the FeatherLight.js library. FeatherLight creates amazing LightBox effects on elements..-->
-        	    <!--Buttons that trigger the plots on the map. Each allergy is specific to each button-->
-        	    
-        	    <div id="buttons">
-        	        <button id="nuts">Nuts</button>
-        	        <button id="peanuts">Peanuts</button>
-        	        <button id="wheat">Wheat</button>
-        	        <button id="seafood">Seafood</button>
-        	        <button id="dairy">Dairy</button>
-        	        <button id="clear">Clear</button>
-        	        <button data-featherlight="#inst">Instructions</button>
+        	    <div class="che">
+            	    <!--Instructions on how to work the website are made possible with the FeatherLight.js library. FeatherLight creates amazing LightBox effects on elements..-->
+            	    <!--Buttons that trigger the plots on the map. Each allergy is specific to each button-->
+            	    <button data-featherlight="#inst" class="int">Instructions</button>
+    
+            	    <div id="buttons" style="padding-left:7em;" class="row">
+                	        <img src="img/markers/nuts.png" id="nuts" class="pc pic"/>
+                	        <img src="img/markers/peanutlarge.png" id="peanuts" class="pc pic"/>
+                            <img src="img/markers/wheatlarge.png" id="wheat" class="pc pic"/>
+                            <img src="img/markers/seafoodlarge.png" id="seafood" class="pc pic"/>
+                            <img src="img/markers/dairylarge.png" id="dairy" class="pc pic"/>
+            	    </div>
+            	    <button id="clear" class="ints">Clear</button>
         	    </div>
-        	
         	    <!--This div holds the map. The map will be instantiated in search.js.-->
         	
         	    <div id='map'></div>
@@ -185,14 +226,14 @@
         	        <h1 class="grades wow fadeIn" data-wow-duration="1.5s" style="font-size: 300%;">What grading system do we use for our restaurants?</h1>
         	        <div class="row grade">
         	            <p class="col wow fadeInDown">0</p>
-        	            <p class="col wow fadeInDown" data-wow-delay="1.5s" data-wow-duration="1s">0.25</p>
-        	            <p class="col wow fadeInDown" data-wow-delay="2.5s" data-wow-duration="1s">0.5</p>
-        	            <p class="col wow fadeInDown" data-wow-delay="3.5s" data-wow-duration="1s">0.75</p>
-        	            <p class="col wow fadeInDown" data-wow-delay="4.5s" data-wow-duration="1s">1</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="1.5s" data-wow-duration="1s">1</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="2.5s" data-wow-duration="1s">2</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="3.5s" data-wow-duration="1s">3</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="4.5s" data-wow-duration="1s">4</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="4.5s" data-wow-duration="1s">5</p>
         	        </div>
-        	        <p class="grades wow fadeInUp" data-wow-delay="5.5s" style="font-size: 200%;padding-bottom:2em;">We use a custom-made 5-point grading scale for each of our restaurants <br />to distinguish their level of allergy.
-        	        0-0.25 means that nearly all, or anything worth eating, <br />at the restaurant has the allergen in some way.
-        	        All of the points you see when you press <br />a button gave an allergen rating of 0.5 or higher. </p>
+        	        <p class="grades wow fadeInUp padsides" data-wow-delay="5.5s" style="font-size: 200%;padding-bottom:2em;">We use a custom-made grading system for each of the restaurants <br />to allow you to scale how safe it is to eat there.
+        	        The resturant are scaled from defcon 1-5 with 1 being the safest and 5 being the most hazerdouse. <br /></p>
         	    </div>
         	    
         	    <!--Footer-->
@@ -260,7 +301,6 @@
             	        <ol style="padding-left:5em">
             	            <li><p style="font-size: 150%">Click the Geolocate button in the top right hand corner of the map.</p></li>
             	            <li><p style="font-size: 150%">Click one of the buttons. If you can't see anything, zoom out.</p></li>
-            	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
             	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
             	            <li><p style="font-size: 150%">If you can't see an allergy, press the Clear button and press the allergy's button again!</p></li>
             	        </ol>

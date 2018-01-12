@@ -46,11 +46,11 @@
     		$(document).ready(function() {
     		    //fullPage.js code that enables scrolling on a certain screen width, slide navigation, and text to display on side navigation.
     			$('#fullpage').fullpage({
-					anchors: ['firstPage', 'secondPage', '3rdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+					anchors: ['firstPage', 'secondPage', '3rdPage', 'fourthPage', 'fifthPage'],
 					navigation: true,
 					slidesNavigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['About Us', 'Who Are We?', 'Design Challenge', 'Our Solution', 'Credits', 'Footer'],
+					navigationTooltips: ['Who Are We?', 'Design Challenge', 'Our Solution', 'Credits', 'Footer'],
 					scrollBar: true,
 					scrollingSpeed: 1000,
 					responsiveWidth: 1100
@@ -101,17 +101,13 @@
         <div id="fullpage">
                 
     	    <!--Every pair of '.section' and '#section' contain a single section of the fullPage.js-->
-    	    
-    	    <!--Title section-->
-    	    
-            <div class="section" id="section0 abt0" style="background-color: rgba(225, 225, 225, .5);">
-                <h1 class="abouts wow fadeIn" data-wow-duration="2s">About Us</h1>
-            </div>
+    	   
+
             
             <!--Section specifically about our team. No picture of us, but maybe some after the final.-->
             
-            <div class="section" id="section1" style="background-color: #FFB65B;">    
-                <h2 class="wow fadeInDown sec1" data-wow-delay="1s">Who Are We?</h2><br />
+            <div class="section" id="section0" style="background-color: #FFB65B;">    
+                <h2 class="wow fadeInDown sec1 paddsides" data-wow-delay="1s">Who Are We?</h2><br />
                 <div style="font-size: 150%;">
                     <p class="sec1 wow fadeIn" data-wow-delay="1.5s">We are a group from the <a href="https://www.knoxschools.org/landn" class="stem">L&N STEM Academy</a>, a Knoxville magnet high school, participating in the <a href="http://codetn.org/" class="codetn">CodeTN</a> website design challenge.</p><br />
                     <p style="text-align:left;padding-left:15%;" class="sec1 wow fadeIn" data-wow-delay="2s">Our members include: </p>
@@ -125,32 +121,31 @@
                     
                     <!--Mr. Lafollette is our Tech Mentor of sorts. He gave us advice for every step of the process. Everything about this website came from Mr. Lafollette. Thank you!-->
                     
-                    <p class="sec1 wow fadeIn" data-wow-delay="5s">In addition to us, we were helped by Mr. Clint Lafollette, the Animation and Digital Arts teacher here at the STEM Academy. He helped us present our concept in the most appealing format possible.</p>
+                    <p class="sec1 wow fadeIn padsides" data-wow-delay="5s">In addition to us, we were helped by Mr. Clint Lafollette, the Animation and Digital Arts teacher here at the STEM Academy. He helped us present our concept in the most appealing format possible.</p>
                 </div>
             </div>
             
             <!--This section is to tell the reader the reason behind why this website was made.-->
             
-            <div class="section" id="section2" style="background-color:#55DE6E;">
+            <div class="section" id="section1" style="background-color:#55DE6E;">
                 <h2 class="sec1 wow fadeInDown" data-wow-delay="0.5s">The Design Challenge?</h2>
                 <p class="sec1 wow fadeInUp" data-wow-delay="1.5s" style="font-size:150%;">We were tasked with designing a web app that solved an issue in our school, community, or world. <br />For more information, click the link <a href="http://codetn.org/kickoff-2/">here</a> to go to the CodeTN website.</p>
             </div>
             
             <!--This next section informs the reader of what AllerGPS is and why is was made.-->
             
-            <div class="section" id="section3" style="background-color:#87e1e6;">    
-                <h2 class="sec1 wow fadeIn" data-wow-delay="0.5s">Our Solution?</h2>
-                <p class="sec1 wow fadeInUp" style="font-size:150%;" data-wow-delay="2s">Our solution was AllerGPS, an app that helps people with allergies find places to eat easily. This was chosen because of 
+            <div class="section" id="section2" style="background-color:#87e1e6;">
+                <h2 class="sec1 wow fadeInDown" data-wow-delay="0.5s">Our Solution</h2>
+                <p class="sec1 wow fadeInUp padsides" data-wow-delay="1.5s" style="font-size:150%;">Our solution was AllerGPS, an app that helps people with allergies find places to eat easily. This was chosen because of 
                     its prevalence in our world today. According to the CDC, the amount of children with food allergies has increaded by 50% in 
-                    the past 10 years. Rather than letting children or their parents guess where it is OK to eat, our app gives them locations to go to, or avoid.
-                </p>
+                    the past 10 years. Rather than letting children or their parents guess where it is OK to eat, our app gives them locations to go to, or avoid.</p>
             </div>
             
             <!--This section is meant to credit all the various softwares that we used to make this website. I had to leave out a few, so here are the ones.
             This was all possible because of Cloud9, the IDE this is being written on. Because of Cloud9, we don't have to worry about using only one computer as a workstation.
             Most of all, thanks to all the parents and mentors that we had to encourage us to make this website. There were times when we didn't think we would get this done, but we pulled through.-->
             
-            <div class="section" id="section4">
+            <div class="section" id="section3">
                 
                 <!--Each pair of '.slide' and '#slide' contain a single slide in a given section.
                 Headers and other important text are contained in <strong> tags.
@@ -191,7 +186,7 @@
                 To see spacing for this, look in the Footer section of general.css
             -->
             
-            <div class="section" id="section5 section-footer" style="background-color:#7791C2;">
+            <div class="section" id="section4 section-footer" style="background-color:#7791C2;">
     			<div class="fp-bg"></div>
     			<div class="intro">
     				<div class="row" style="color:#F9F7F7;">

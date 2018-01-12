@@ -37,6 +37,7 @@
 				f.parentNode.insertBefore(j, f);
 			})(window, document, 'script', 'dataLayer', 'GTM-TVGHNP5');
 		</script>
+		
 		<!-- End Google Tag Manager -->
 	
 		<!--Code for favicon-->
@@ -289,6 +290,9 @@
 								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="#" style="color:white;">Home</a></li>
 								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="explore.html" style="color:white;">AllerSearch</a></li>
 								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
+								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><button id ="present" type="button" style="background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Present</button>
+</a></li>
+
 							</ul>
 						</div>
 	
@@ -328,6 +332,17 @@
 		<script>
 			new WOW().init();
 		</script>
-	
+		
+		<!--Essential WOW.js code that enables all of the when-visible animations-->
+
+		<script>
+			$("#present").click( function() {
+    setTimeout(function(){ $.fn.fullpage.moveTo(1); }, 1000);
+    setTimeout(function(){ $.fn.fullpage.moveTo(2); }, 10000);
+    setTimeout(function(){ $.fn.fullpage.moveTo(3); }, 10000);
+    setTimeout(function(){ $.fn.fullpage.moveTo(4); }, 10000);
+    setTimeout(function(){ $.fn.fullpage.moveTo(5); }, 10000);
+           });
+		</script>
 	</body>
 </html>
