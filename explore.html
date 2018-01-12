@@ -21,6 +21,7 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
             <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
             <link rel="stylesheet" type="text/css" href="css/general.css"/>
+            <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
 
     
@@ -30,6 +31,7 @@
         	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     		
     		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+            <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     		
             <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
             <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
@@ -58,9 +60,9 @@
     		  <div class="row navth">
     			  	
     			<a href="#" data-activates="mobile-demo" class="button-collapse mobars"><i class="fa fa-bars fa-4 mobars" aria-hidden="true"></i></a>
-    			<h1 class="hones logo link navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>
-    			<h1 class="col hones link navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="#" class="as">Explore</a></h1>
-    			<h1 class="col hones link navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
+    			<h1 class="hones logo links navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="index.html" class="as">Home</a></h1>
+    			<h1 class="col hones links navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="#" class="as">Explore</a></h1>
+    			<h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
     			  
     		  </div>
     			  
@@ -83,26 +85,7 @@
         	    
         	    <!--Instructions on how to work the website.-->
         	    
-        	    <div class="instruct">
-        	        <h1 style="font-size: 200%;text-align:center;">Instructions</h1>
-        	        <ol style="padding-left:5em">
-        	            <li><p style="font-size: 150%">Click the Geolocate button in the top right hand corner of the map.</p></li>
-        	            <li><p style="font-size: 150%">Click one of the buttons. If you can't see anything, zoom out.</p></li>
-        	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
-        	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
-        	            <li><p style="font-size: 150%">If you can't see an allergy, press the Clear button and press the allergy's button again!</p></li>
-        	        </ol>
-        	        
-        	        
-        	        
-        	        
-        	        <!--
-        	        1. Click the Geolocate button in the top right hand corner of the map.
-        	        2. Click one of the buttons. If you can't see anything, zoom out.
-        	        3. Feel free to stack layers on top of each other. 
-        	        4. If you can't see a layer, press the Clear button.
-        	        -->
-        	    </div>
+
         	    
         	    <!--Buttons that trigger the plots on the map. Each allergy is -->
         	    
@@ -113,6 +96,7 @@
         	        <button id="seafood">Seafood</button>
         	        <button id="dairy">Dairy</button>
         	        <button id="clear">Clear</button>
+        	        <button data-featherlight="#inst">Instructions</button>
         	    </div>
         	
         	    <div id='map'></div>
@@ -135,7 +119,7 @@
                             <!--Second column-->
                             
                             <div class="col-md-2 mx-auto">
-                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-2 ml-4 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
+                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-4 ml-4 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
                                 <ul>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="index.html" style="color:white;">Home</a></li>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="#" style="color:white;">AllerSearch</a></li>
@@ -148,7 +132,7 @@
                             <!--Third column-->
                             
                             <div class="col-md-2 mx-auto">
-                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-2 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
+                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
                                 <ul>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
@@ -170,7 +154,20 @@
                     </div>
         		</div>
             </div>
-            
+            <div id="quickSlide">
+                <div class="lightbox" id="inst">
+            	    <div class="instruct">
+            	        <h1 style="font-size: 200%;text-align:center;">Instructions</h1>
+            	        <ol style="padding-left:5em">
+            	            <li><p style="font-size: 150%">Click the Geolocate button in the top right hand corner of the map.</p></li>
+            	            <li><p style="font-size: 150%">Click one of the buttons. If you can't see anything, zoom out.</p></li>
+            	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
+            	            <li><p style="font-size: 150%">Feel free to stack allergies on top of each other to see what restaurants share traits.</p></li>
+            	            <li><p style="font-size: 150%">If you can't see an allergy, press the Clear button and press the allergy's button again!</p></li>
+            	        </ol>
+            	    </div>
+                </div>
+            </div>
             
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>

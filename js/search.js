@@ -4,8 +4,8 @@
                 var map = new mapboxgl.Map({
                     container: 'map', // container id
                     style: 'mapbox://styles/mapbox/light-v9', //Link to map style
-                    center: [-96, 37.8], // starting position
-                    zoom: 3 // starting zoom
+                    center: [-86.349669, 35.877084], // starting position
+                    zoom: 6 // starting zoom
                 });
 
             // Add geolocate control to the map, the little button you see in the top right hand corner of the map.

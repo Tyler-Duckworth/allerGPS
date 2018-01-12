@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-	<head>
-		<title>AllerGPS</title>
-		
-		<!-- Metadata tags for browsers-->
-		
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="author" content="Tyler Duckworth" />
-		<meta name="Resource-type" content="Document" />
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		
-		<!--Code for favicon-->
-		
-		<link rel="icon" type="image/gif" href="img/pin_drop.gif" />
-		
-		<!--Links to the Google Fonts that we use-->
-		
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:thin">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
-		
-		<!--Links to the CSS Style Sheets we use for pages, and libraries-->
-		
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
-	    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		
-		<link rel="stylesheet" type="text/css" href="css/general.css"/>
-		
-		
-		<link rel="stylesheet" href="libs/wowjs/animate.css">
-	    
-	    <!--Links to our JavaScript files for fullPage.js and Bootstrap-->
-	    
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-		
-	    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.js">
-	    
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-		
-		<link rel="stylesheet" type="text/css" href="libs/fullPage/jquery.fullPage.css">
-		<script type="text/javascript" src="libs/fullPage/scrolloverflow.js"></script>
-		<script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
-		
-		<!--[if IE]>
+<head>
+    <title>AllerGPS</title>
+
+    <!-- Metadata tags for browsers-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Tyler Duckworth" />
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Code for favicon-->
+
+    <link rel="icon" type="image/gif" href="img/pin_drop.gif" />
+
+    <!--Links to the Google Fonts that we use-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:thin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+
+    <!--Links to the CSS Style Sheets we use for pages, and libraries-->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/general.css" />
+
+
+    <link rel="stylesheet" href="libs/wowjs/animate.css">
+
+    <!--Links to our JavaScript files for fullPage.js and Bootstrap-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.js">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="libs/fullPage/jquery.fullPage.css">
+    <script type="text/javascript" src="libs/fullPage/scrolloverflow.js"></script>
+    <script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
+
+    <!--[if IE]>
 			<script type="text/javascript">
 				 var console = { log: function() {} };
 			</script>
 		<![endif]-->
-	
-		<!--jQuery code that enables fullPage.js and Materialize.css-->
-	
-		<script type="text/javascript">
-			$(document).ready(function() {
-					$('#fullpage').fullpage({
-						anchors: ['firstPage', 'secondPage', '3rdPage', 'fourthPage', 'fifthPage'],
-						navigation: true,
-						slidesNavigation: true,
-						navigationPosition: 'right',
-						navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'Mobile', 'Footer'],
-						scrollBar: true,
-						scrollingSpeed: 1000,
-						responsiveWidth: 1100
-					});
-					$(".button-collapse").sideNav();
-				});
-		</script>
-		
-	</head>
-	
-	<!--
+
+    <!--jQuery code that enables fullPage.js and Materialize.css-->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+        					$('#fullpage').fullpage({
+        						anchors: ['firstPage', 'secondPage', '3rdPage', 'fourthPage', 'fifthPage'],
+        						navigation: true,
+        						slidesNavigation: true,
+        						navigationPosition: 'right',
+        						navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'Mobile', 'Footer'],
+        						scrollBar: true,
+        						scrollingSpeed: 1000,
+        						responsiveWidth: 1100
+        					});
+        					$(".button-collapse").sideNav();
+        				});
+    </script>
+
+</head>
+
+<!--
 	    There are many classes and IDs used in this website. 
 	        The class 'wow' denotes WOW.js, followed by the animation of choice, including 'fadeIn,' 'fadeInDown', or 'fadeUp' along with variables changing length and delay
 	        ID 'fullpage', subsequent class 'section', and other markers ['section0', 'section1', etc.] denote the section of the page that will be affected by fullPage.js, in this case, everything but the navbar
@@ -82,211 +82,222 @@
 		In this file: 
 			The 'intro' class is a general color and font-weight style for the text in this page. For more info, see Line 116-119 of general.css
 	-->
-	
-	<body>
-		
-		<!--Navbar, fixed and mobily enabled-->
-		
-		<nav class="thing hones">
-			<div class="nav-wrapper">
-			  <div class="row navth">
-			  	
-				<a href="#" data-activates="mobile-demo" class="button-collapse mobars"><i class="fa fa-bars fa-4 mobars" aria-hidden="true"></i></a>
-				<h1 class="hones logo links navy col mx-auto d-block wow fadeInDown"  data-wow-duration="3s" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
-				<h1 class="col hones links navy mx-auto d-block wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
-				<h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
-			  
-			  </div>
-			  
-			  <!--Mobile Pullout Navbar-->
-			  
-			  <ul class="side-nav sidle" id="mobile-demo" style="background-color:#7791C2;">
-				<li><h1 class="hones logo link" style="text-align:center;"><a href="#!" class="as mobil">Home</a></h1>			</li>
-				<li><h1 class="hones link" style="text-align:center;"><a href="explore.html" class="as mobil">Explore</a></h1>			</li>
-				<li><h1 class="hones link" style="text-align:center;"><a href="other/about.html" class="as mobil">About</a></h1>			</li>
-			  </ul>
-			  
-			</div>
-		  </nav>
-		
-		<!--Start of fullPage.js content, including most of it.
+
+<body>
+
+    <!--Navbar, fixed and mobily enabled-->
+
+    <nav class="thing hones">
+        <div class="nav-wrapper">
+            <div class="row navth">
+
+                <a href="#" data-activates="mobile-demo" class="button-collapse mobars"><i class="fa fa-bars fa-4 mobars" aria-hidden="true"></i></a>
+                <h1 class="hones logo links navy col mx-auto d-block wow fadeInDown" data-wow-duration="3s" style="text-align:center;"><a href="#!" class="as">Home</a></h1>
+                <h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s" style="text-align:center;"><a href="explore.html" class="as">Explore</a></h1>
+                <h1 class="col hones links navy mx-auto d-block wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s" style="text-align:center;"><a href="other/about.html" class="as">About</a></h1>
+
+            </div>
+
+            <!--Mobile Pullout Navbar-->
+
+            <ul class="side-nav sidle" id="mobile-demo" style="background-color:#7791C2;">
+                <li>
+                    <h1 class="hones logo link" style="text-align:center;"><a href="#!" class="as mobil">Home</a></h1>
+                </li>
+                <li>
+                    <h1 class="hones link" style="text-align:center;"><a href="explore.html" class="as mobil">Explore</a></h1>
+                </li>
+                <li>
+                    <h1 class="hones link" style="text-align:center;"><a href="other/about.html" class="as mobil">About</a></h1>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--Start of fullPage.js content, including most of it.
 		All WOW.js animations are written to fire sequentially.-->
-		
-		<div id="fullpage">
-			s
-			<!--Title section with logo and button to take you to AllerSearch-->
-			
-			<div class="section" id="section0 thingie" style="background-color:white;">
-				
-				<div class="intro">
-					<h1 class="titles wow fadeIn" data-wow-duration="3s" style="font-size:5em; font-family:'Roboto';">Welcome To</h1>
-					<img src="img/logo_allerGPS_200.png"  data-wow-delay="1s" data-wow-duration="2s" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;" class="logo jackInTheBox">
-					<br />
-					<img src="img/scroll.gif" width="10%" class="scrolldown bounceIn">
-				</div>
-			</div>
-			
-			<!--This section defines what AllerGPS is and what it does.
+
+    <div id="fullpage">
+        s
+        <!--Title section with logo and button to take you to AllerSearch-->
+
+        <div class="section" id="section0 thingie" style="background-color:white;">
+<script>
+$(document).on('click', '#scrollid', function(){
+  $.fn.fullpage.moveSectionDown();
+});
+</script>
+            <div class="intro">
+                <h1 class="titles wow fadeIn" data-wow-duration="3s" style="font-size:5em; font-family:'Roboto';">Welcome To</h1>
+                <img src="img/logo_allerGPS_200.png" data-wow-delay="1s" data-wow-duration="2s" width="100%" height="100%" style="margin-bottom:3em;margin-top:3em;" class="logo jackInTheBox">
+                <br />
+                <img src="img/scroll.gif" id="scrollid" width="10%" class="scrolldown bounceIn">
+            </div>
+        </div>
+
+        <!--This section defines what AllerGPS is and what it does.
 			Varying font-sizes are put in place to provide easy distinguishability.
 			-->
-			
-			<div class="section" id="section1" style="background-color:#3FD2D6;">
-				
-				<div class="intro texting">
-					<h1 class="yoy wow fadeIn" style="font-size:250%">What is AllerGPS?</h1>
-					<br />
-					<h3 class="yoy wow fadeIn whothy" style="font-size:200%" data-wow-delay="1s">
-						AllerGPS is a dynamic web application built for those who have allergies that <br />hinder them from eating certain foods. <br /> <br />
-			    		It takes into account these allergies to chart a map of locations that the user can go to <br />and enjoy without worrying about their allergies.
-			    		<br /> <br />
-			    		AllerGPS was made to be simple, elegant, and powerful.
-			    		<br /> <br />					
-			    	</h3>			
-			    </div>
-			</div>
-			
-			
-			<!--This section tells the features of AllerGPS, as to interest the reader
+
+        <div class="section" id="section1" style="background-color:#3FD2D6;">
+
+            <div class="intro texting">
+                <h1 class="yoy wow fadeIn" style="font-size:250%">What is AllerGPS?</h1>
+                <br />
+                <h3 class="yoy wow fadeIn whothy" style="font-size:200%" data-wow-delay="1s">
+                    AllerGPS is a dynamic web application built for those who have allergies that <br />hinder them from eating certain foods. <br /> <br /> It takes into account these allergies to chart a map of locations that the user can go to <br
+                    />and enjoy without worrying about their allergies.
+                    <br /> <br /> AllerGPS was made to be simple, elegant, and powerful.
+                    <br /> <br />
+                </h3>
+            </div>
+        </div>
+
+
+        <!--This section tells the features of AllerGPS, as to interest the reader
 			Also, we only have the geographical point data for most of the restaurants in Knoxville. In the future, we will 
 			procedurally generate the data and the bounding box of the map to ensure a custom user experience.
 			-->
-			
-			<div class="section" id="section2">
-				
-				<!--Slide about AllerGPS's AllerBase DB and Global Access
+
+        <div class="section" id="section2">
+
+            <!--Slide about AllerGPS's AllerBase DB and Global Access
 				To download AllerBase, go to markers and download the markers ZIP file.
 				-->
-				
-			    <div class="slide" id="slide1" style='background-color:#FFB65B;'>
-			    	
-					<div class="intro texting">
-						<h1 style="margin-top:1em;font-size:250%;" class="yoo wow fadeIn">Features</h1>
-				        <div class="row" style="margin-top:5em;" class="yoo">
-				            <div class="col">
-				                <img src="img/restaurant.png" class="minipic mx-auto d-block wow fadeIn" data-wow-delay="1s">
-				            </div><div class="col">
-				                <img src="img/everywhere.png" class="minipic mx-auto d-block wow fadeIn" data-wow-delay="1s">
-				            </div>
-				        </div>
-				        
-				        <div class="row" style="margin-top:2em;" class="yoo">
-				            <div class="col">
-				                <h3 class="desch2 f wow fadeIn" data-wow-delay="1s">AllerGPS uses AllerBase, a detailed database<br /> of restaurant data that 
-				            includes all of your favorite places and more to enable better searching!</h3>
-				            </div>
-				            <div class="col">
-				                <h3 class="desch2 descr wow fadeIn" data-wow-delay="1s">AllerGPS has a fully-functioning map, <br />which means that anyone in the U.S. <br />can access it from anywhere!</h3>
-				            </div>
-				        </div>
-				        
-					</div>
-				</div>
-				
-				<div class="slide" id="slide2" style='background-color: #FFB6AE'>
-					
-			    	<div class="texting">
-			    		<h1 style="margin-top:1em;font-size:250%;" class="yoo wow fadeIn">Features</h1>
-			    		<!--The feature images for the Features section. The 'minipic' class styles the images in both desktop and mobile format.-->
-		 				<div class="row " style="padding-top:3em;">
-				            <div class="col">
-				                <img src="img/free.png" class="minipic mx-auto d-block" class="yoo wow fadeIn">
-				            </div><div class="col">
-				                <img src="img/variety.png" class="minipic mx-auto d-block" class="yoo wow fadeIn">
-				            </div>
-				        </div>
-				        
-				        <div class="row">
-				            <div class="col">
-				                <h3 class="desch2 yoo descrr wow fadeIn" data-wow-delay="0.5s">Unlike other similar services, <br />AllerGPS does not require any fee or sign up <br />for access to its search tool. It is available for free.
-				            </div>
-				            <div class="col">
-				                <h3 class="desch2 yoo descrr wow fadeIn" data-wow-delay="0.5s" >AllerGPS also has a variety of food allergies <br /> for the user to choose in order to have <br />the best experience possible.</h3>
-				            </div>
-				        </div>
-			        </div>
-				</div>
-		
-			</div>
-			
-			<!--This section is meant to link to our GitHub repo of this website and encourage the reader to try to make improvements to it on their own.-->
-			
-			<div class="section" id="section3" style="background-color:#55DE6E">
-				<div class="intro intrare">
-					
-					<!--Awesome Animate.css infinite pulsing animation
+
+            <div class="slide" id="slide1" style='background-color:#FFB65B;'>
+
+                <div class="intro texting">
+                    <h1 style="margin-top:1em;font-size:250%;" class="yoo wow fadeIn">Features</h1>
+                    <div class="row" style="margin-top:5em;" class="yoo">
+                        <div class="col">
+                            <img src="img/restaurant.png" class="minipic mx-auto d-block wow fadeIn" data-wow-delay="1s">
+                        </div>
+                        <div class="col">
+                            <img src="img/everywhere.png" class="minipic mx-auto d-block wow fadeIn" data-wow-delay="1s">
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:2em;" class="yoo">
+                        <div class="col">
+                            <h3 class="desch2 f wow fadeIn" data-wow-delay="1s">AllerGPS uses AllerBase, a detailed database<br /> of restaurant data that includes all of your favorite places and more to enable better searching!</h3>
+                        </div>
+                        <div class="col">
+                            <h3 class="desch2 descr wow fadeIn" data-wow-delay="1s">AllerGPS has a fully-functioning map, <br />which means that anyone in the U.S. <br />can access it from anywhere!</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slide" id="slide2" style='background-color: #FFB6AE'>
+
+                <div class="texting">
+                    <h1 style="margin-top:1em;font-size:250%;" class="yoo wow fadeIn">Features</h1>
+                    <!--The feature images for the Features section. The 'minipic' class styles the images in both desktop and mobile format.-->
+                    <div class="row " style="padding-top:3em;">
+                        <div class="col">
+                            <img src="img/free.png" class="minipic mx-auto d-block" class="yoo wow fadeIn">
+                        </div>
+                        <div class="col">
+                            <img src="img/variety.png" class="minipic mx-auto d-block" class="yoo wow fadeIn">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="desch2 yoo descrr wow fadeIn" data-wow-delay="0.5s">Unlike other similar services, <br />AllerGPS does not require any fee or sign up <br />for access to its search tool. It is available for free.
+                        </div>
+                        <div class="col">
+                            <h3 class="desch2 yoo descrr wow fadeIn" data-wow-delay="0.5s">AllerGPS also has a variety of food allergies <br /> for the user to choose in order to have <br />the best experience possible.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--This section is meant to link to our GitHub repo of this website and encourage the reader to try to make improvements to it on their own.-->
+
+        <div class="section" id="section3" style="background-color:#55DE6E">
+            <div class="intro intrare">
+
+                <!--Awesome Animate.css infinite pulsing animation
 					See 'github' class on Line 249 of general.css.
 					-->
-					
-					<a href="https://github.com/allerGPS/allerGPS"><img src="img/GitHub_Logo_White.png" class="github pulse"></a>
-					<h3 class="texting wow fadeInDown" data-wow-delay="0.5s" data-wow-duration="1s" style="font-size:200%;">Come check out the source code for this website on our GitHub! <br />Feel free to clone the code and make a spinoff application!</h3>
-				</div>
-			</div>
-			
-			<!--Footer-->
-			
-	        <div class="section" id="section5 section-footer" style="background-color:#7791C2;">
-	    		<div class="intro">
-	    			<div class="row" style="color:#F9F7F7;">
-	           
-	                    <!--First column-->
-	                    
-	                    <div class="col-md-4">
-	                        <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold wow fadeInDown">AllerGPS</h5>
-	                        <p class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">Our Mission: To make the experience of finding food easier for those with allergies.
-	                        </p>
-	                    </div>
-	
-						<!--Horizontal rules that are great for mobile mode.-->
-						
-	                    <hr class="clearfix w-100 d-md-none">
-	            
-	                    <!--Second column-->
-	                    
-	                    <div class="col-md-2 mx-auto">
-	                        <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-0 ml-2 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
-	                        <ul>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="#" style="color:white;">Home</a></li>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="explore.html" style="color:white;">AllerSearch</a></li>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
-	                        </ul>
-	                    </div>
-	
-	                    <hr class="clearfix w-100 d-md-none">
-	            
-	                    <!--Third column-->
-	                    
-	                    <div class="col-md-2 mx-auto">
-	                        <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-0 ml-2 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
-	                        <ul>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/contact.html" style="color:white;">Contact Us</a></li>
-	                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
-	                         </ul>
-	                    </div>
-	                </div>
-	            </div>
-	
-	            <hr width="75%">
-	            
-	            <!--Copyright-->
-	            
-	            <div class="footer-copyright my-copy" style="color:#F9F7F7;">
-	                <div class="container-fluid wow fadeInUp" data-wow-delay="4s" style="vertical-align:middle;">
-	                    &#x24B8; 2018 Copyright: AllerGPS Inc.
-	                </div>
-	            </div>
-	            
-			</div>
-		</div>
-		
-		<!--Essential WOW.js code that enables all of the when-visible animations-->
-		
-		<script src="libs/wowjs/wow.js"></script>
-		
-		<script>
-			new WOW().init();
-		 </script>
-		 
-	</body>
+
+                <a href="https://github.com/allerGPS/allerGPS"><img src="img/GitHub_Logo_White.png" class="github pulse"></a>
+                <h3 class="texting wow fadeInDown" data-wow-delay="0.5s" data-wow-duration="1s" style="font-size:200%;">Come check out the source code for this website on our GitHub! <br />Feel free to clone the code and make a spinoff application!</h3>
+            </div>
+        </div>
+
+        <!--Footer-->
+
+        <div class="section" id="section5 section-footer" style="background-color:#7791C2;">
+            <div class="intro">
+                <div class="row" style="color:#F9F7F7;">
+
+                    <!--First column-->
+
+                    <div class="col-md-4">
+                        <h5 class="title mb-2 mt-0 pt-4 pb-3 font-bold wow fadeInDown">AllerGPS</h5>
+                        <p class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">Our Mission: To make the experience of finding food easier for those with allergies.
+                        </p>
+                    </div>
+
+                    <!--Horizontal rules that are great for mobile mode.-->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!--Second column-->
+
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-4 ml-4 font-bold wow fadeInDown" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
+                        <ul>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="#" style="color:white;">Home</a></li>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="explore.html" style="color:white;">AllerSearch</a></li>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!--Third column-->
+
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
+                        <ul>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/contact.html" style="color:white;">Contact Us</a></li>
+                            <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr width="75%">
+
+            <!--Copyright-->
+
+            <div class="footer-copyright my-copy" style="color:#F9F7F7;">
+                <div class="container-fluid wow fadeInUp" data-wow-delay="4s" style="vertical-align:middle;">
+                    &#x24B8; 2018 Copyright: AllerGPS Inc.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Essential WOW.js code that enables all of the when-visible animations-->
+
+    <script src="libs/wowjs/wow.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
 </html>

@@ -1,416 +1,364 @@
-	/*General Styling*/
-		html {
-		    width: 100%;
-		    height: 100%;
-		    margin: 0px;
-		    padding: 0px;
-		    overflow-x: hidden; 
-		}
-		
-		body {
-		    width: 100%;
-		    margin: 0 auto;
-		}
-		
-		.bod {
-		    background: 
-		        linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, 
-		        linear-gradient(63deg, transparent 74%, #999 78%), 
-		        linear-gradient(63deg, transparent 34%, #999 38%, #fff 58%, transparent 62%), 
-		        #5A6D92;
-		        background-size: 16px 48px;
-		}
-		
-	/*Navbar Styling*/
-		.thing {
-		    background: #5A6D92;
-		    z-index: 999;
-		    margin: 0px;
-		    height: 2.5em;
-		    position: fixed;
-			padding-bottom: 5em;
-		}
-		/*Styling for pullout navbar and bars icon*/
-			.sidle {
-				background-color:#7791C2;
-			}
-			.mobars:hover {
-		    	color: #58A5CF;
-			}
-			.mobil {
-		    	font-size: 50%;
-		    }
-		
-		/*Styling for anchors*/
-			a {
-			    text-decoration: none !important;
-			}
-			.link a {
-			    color: #f9f7f7;
-			}
-			.link {
-				display: inline-block;
-				font-size: 200%;
-			}
-			.link a:hover {
-				color: #fff;
-			}
-			.links a {
-			    color: #f9f7f7;
-			}
-			.links {
-				display: inline-block;
-				font-size: 200%;
-			}
-			.links a:hover {
-				color: #fff;
-			}
-			.as {
-			     display:inline-block;
-			}
-			
-		/*Used to style header-1, hence h'ones' */
-			.hones {
-			    z-index: 999;
-			    max-width: 100%;
-			    width: 100%;
-				font-size: 175%;
-				font-family: brandon-grotesque, sans-serif;
-				font-style: normal;
-				font-weight: 100;
-			    padding-bottom: 0.1em;
-			    padding-top: 0.3em;
-				margin: 0 auto;
-			}
-		
-		/*Styles the navbar text to create the line-draw hover effect.*/
-			.navy {
-			  position: relative;
-			  color: #fff;
-			  text-decoration: none;
-			  position: relative;
-			  color: #fff;
-			  text-decoration: none;
-			}
-			
-			.navy:hover {
-			  color: #fff;
-			}
-			
-			.navy:before {
-			  content: "";
-			  position: absolute;
-			  width: 100%;
-			  height: 2px;
-			  bottom: 0;
-			  left: 0;
-			  background-color: #fff;
-			  visibility: hidden;
-			  -webkit-transform: scaleX(0);
-			  transform: scaleX(0);
-			  -webkit-transition: all 0.3s ease-in-out 0s;
-			  transition: all 0.3s ease-in-out 0s;
-			}
-			
-			.navy:hover:before {
-		  	  visibility: visible;
-			  -webkit-transform: scaleX(0.25);
-			  transform: scaleX(0.25);
-			}
-
-		/*Footer Styling*/
-			.navg:hover {
-			  color: #fff;
-			}
-			
-			.intro p, h1, h3{
-				color: #fff;
-				font-weight:100;
-			}
-			.mobfo {
-				margin-bottom:-5%;
-			}
-
-	
-	/*Alterations to elements for mobile screen*/
-		@media only screen and (max-width: 1100px) {
-			/*Navbar styling to hide nav while in mobile mode*/
-			    .links {
-			        font-size: 0px;
-			        content: '';
-			    }
-			    
-
-			
-			/*Index.html mobile styling for fonts and images in the Features section*/
-				/*Styling for large block of text*/
-					.whothy {
-						size:150%;
-					}	
-				
-				.descr {
-					font-size:130%;
-					margin-top: -10%;
-				}
-				
-				.descrr {
-					font-size:130%;
-					margin-top: 0;
-				}
-				
-				.minipic {
-					margin-top: -20%;
-					width: 100%;
-					height: 125%
-				}
-			/*Edit to Bootstrap spacing in footer to allow for better aligning when in mobile mode.*/
-				.ml-2 {
-					margin-left:.25rem!important;
-				}
-				
-			/*about.html mobile styling*/
-        		.about {
-        		    font-size: 400%;
-        		}
-        		.boxthatmap {
-        		    width: 75%;
-                    height: 17.5%;
-                    margin-left:15%;
-                    padding-top:1em;
-                    padding-bottom:1em;
-                    display:block;
-        		}
-        		.why {
-        		    width: 75%;
-        		    height: 20%;
-        		}
-        		.fully {
-        		    padding-top: 2em;
-        		}
-        		.mobily {
-        		    font-size: 200%;
-        		}
-		}
-		
-	/*index.html custom code */
-		.titles {
-		    color: white;
-		    font-family: 'Roboto';
-		    margin-top: 0.75em;
-		}
-		.title {
-		    padding: 100px;
-		    text-align: center;
-		    color: white;
-		    font-family: 'Roboto';
-		}
-		.title h1 {
-		    padding-top: 2em;
-		}
-		
-		.button {
-		    background-color: #3596E8; /* Green */
-		    border: 1px solid #350CE8;
-		    color: white;
-		    padding: 15px 32px;
-		    text-align: center;
-		    text-decoration: none;
-		    display: inline-block;
-		    font-size: 16px;
-		    width: 15em;
-		    height:4em;
-		    border-radius: 10px;
-		    cursor: pointer;
-		    float: center;
-		}
-		
-		.button:not(:last-child) {
-		    border-right: none; /* Prevent double borders */
-		}
-		
-		/*.button:hover {
-		    background-color: #226094;
-		}*/
-		
-		.texting {
-			color: white;
-			font-family: 'Roboto';
-		}
-		
-		.descr {
-			font-size:175%;
-		}
-		
-		.descrr {
-			font-size:175%;
-		}
-		
-		.desch2 {
-		    color: #ffffff;
-		    font-family: 'Roboto';
-		    font-size: 1.5em;
-		    text-align: center;
-		    padding-top: 1em;
-		}
-		.minipic {
-		    max-width: 100%;
-		    height: auto;
-		}
-		
-		/*Styles for the Github logo to enable infinite pulsing*/
-			.github {
-		    	width: 50%;
-		    	height: 50%;
-				animation-duration: 2.5s;
-			    animation-fill-mode: both;
-		   	    animation-iteration-count: infinite;
-	    	}
-	
-	/*explore.html Styling*/
-
-            /*Spaces the buttons to avoid inital overlap from the navbar.*/
-            .instruct {
-            	background-color: #3FD2D6;
-            	font-family: 'Lato';
-            	font-weight: 100;
-            	color: #fff;
-            	margin-top:-1%;
-            	padding-top: 1.5em;
-            	padding-bottom: 10em;
-            }
-	
-    /*about.html, privacy.html Styling*/
-	    .privac1 {
-	    	margin-left:10%;
-	    	margin-right:10%;
-	    }
-		
-		.about {
-		    text-align: center;
-		    font-family: 'Roboto';
-		    font-size: 10em;
-		    padding-top: 1em;
-		    padding-bottom: 1em;
-		}
-	    
-	    .sec1 {
-	    	font-family: 'Lato';
-	    	font-weight: 100;
-	    	color: white;
-	    }
-	    
-	    .sec1 h2 {
-    		font-size: 150%;
-    	}
-	    
-	    .hone {
-	    	font-family: 'Roboto';
-	    	font-weight: 100;
-	    	font-size: 225%;
-	    }
-		.strapthatboot {
-		    width: 20%;
-		    height:20%;
-		    margin-left:40%;
-		    padding-top:1em;
-		    padding-bottom:1em;
-		    display:block;
-		    animation-duration: 2.5s;
-			animation-fill-mode: both;
-		   	animation-iteration-count: infinite;
-		}
-		
-		.boxthatmap {
-		    width: 50%;
-		    height: 30%;
-		    margin-left:25%;
-		    padding-top:1em;
-		    padding-bottom:1em;
-		    display:block;
-		}
-		
-		/*Styling for the various Credits and images in about.html*/
-		
-    	.waw {
-    		font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
-    	}
-
-    	.naw {
-    		font-family: arial,helvetica;
-    	}
-    	
-    	.why {
-    		animation-duration: 2.5s;
-	    	animation-fill-mode: both;
-   	    	animation-iteration-count: infinite;
-    	}
-    	
-    	.fully {
-    		padding-bottom: 1em;
-    	}
-    	
-    	.wowy {
-    		padding-bottom:1em;
-    	}
-    	
-    	.section {
-    	    margin: 0 auto;
-    	}
-    	
-    	.material {
-    		width: 30%;
-    		height: 30%;
-    	}
-    	
-    	.stem {
-    		color: black;
-    	}
-    	
-    	.stem:hover {
-    		color: #21691B;
-    	}
-    	
-    	.codetn {
-    		color: black;
-    	}
-    	
-    	.codetn:hover {
-    		color: rgba(4, 51, 255, 0.85);
-    	}
-	    
-	/*fullPage.js personalizations*/
-		.section {
-			background-size: cover;
-			text-align:center;
-		}
-		
-		.fullpage h1 {
-			font-size: 5em;
-			font-family: arial,helvetica;
-			color: #fff;
-			margin:0;
-		}
-		
-		#section2 {
-			padding-bottom: 0;
-		}
-		
-		#section4 {
-    		margin:0;
-    		padding:0;
-    	}
-    	
-	/*WOW.js Styling*/
-	    .wow:first-child {
-	      visibility: hidden;
-	    }
-	    
-	.logo {
-				animation-duration: 2.5s;
-			    animation-fill-mode: both;
-			}
-			.scrolldown {
-				animation-duration: 2.5s;
-			    animation-fill-mode: both;
-			    animation-delay: 2.5s;
-			}
+ 
+/*General Styling*/
+ html {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+ body {
+     width: 100%;
+     margin: 0 auto;
+}
+ .bod {
+     background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #999 78%), linear-gradient(63deg, transparent 34%, #999 38%, #fff 58%, transparent 62%), #5A6D92;
+     background-size: 16px 48px;
+}
+/*Navbar Styling*/
+ .thing {
+     background: #5A6D92;
+     z-index: 999;
+     margin: 0px;
+     height: 2.5em;
+     position: fixed;
+     padding-bottom: 5em;
+}
+/*Styling for pullout navbar and bars icon*/
+ .sidle {
+     background-color:#7791C2;
+}
+ .mobars:hover {
+     color: #58A5CF;
+}
+ .mobil {
+     font-size: 50%;
+}
+/*Styling for anchors*/
+ a {
+     text-decoration: none !important;
+}
+ .link a {
+     color: #f9f7f7;
+}
+ .link {
+     display: inline-block;
+     font-size: 200%;
+}
+ .link a:hover {
+     color: #fff;
+}
+ .links a {
+     color: #f9f7f7;
+}
+ .links {
+     display: inline-block;
+     font-size: 200%;
+}
+ .links a:hover {
+     color: #fff;
+}
+ .as {
+     display:inline-block;
+}
+/*Used to style header-1, hence h'ones' */
+ .hones {
+     z-index: 999;
+     max-width: 100%;
+     width: 100%;
+     font-size: 175%;
+     font-family: brandon-grotesque, sans-serif;
+     font-style: normal;
+     font-weight: 100;
+     padding-bottom: 0.1em;
+     padding-top: 0.3em;
+     margin: 0 auto;
+}
+/*Styles the navbar text to create the line-draw hover effect.*/
+ .navy {
+     position: relative;
+     color: #fff;
+     text-decoration: none;
+     position: relative;
+     color: #fff;
+     text-decoration: none;
+}
+ .navy:hover {
+     color: #fff;
+}
+ .navy:before {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background-color: #fff;
+     visibility: hidden;
+     -webkit-transform: scaleX(0);
+     transform: scaleX(0);
+     -webkit-transition: all 0.3s ease-in-out 0s;
+     transition: all 0.3s ease-in-out 0s;
+}
+ .navy:hover:before {
+     visibility: visible;
+     -webkit-transform: scaleX(0.25);
+     transform: scaleX(0.25);
+}
+/*Footer Styling*/
+ .navg:hover {
+     color: #fff;
+}
+ .intro p, h1, h3{
+     color: #fff;
+     font-weight:100;
+}
+ .mobfo {
+     margin-bottom:-5%;
+}
+/*Alterations to elements for mobile screen*/
+ @media only screen and (max-width: 1100px) {
+    /*Navbar styling to hide nav while in mobile mode*/
+     .links {
+         font-size: 0px;
+         content: '';
+    }
+    /*Index.html mobile styling for fonts and images in the Features section*/
+    /*Styling for large block of text*/
+     .whothy {
+         size:150%;
+    }
+     .descr {
+         font-size:130%;
+         margin-top: -10%;
+    }
+     .descrr {
+         font-size:130%;
+         margin-top: 0;
+    }
+     .minipic {
+         margin-top: -20%;
+         width: 100%;
+         height: 125% 
+    }
+    /*Edit to Bootstrap spacing in footer to allow for better aligning when in mobile mode.*/
+     .ml-2 {
+         margin-left:.25rem!important;
+    }
+    /*about.html mobile styling*/
+     .about {
+         font-size: 400%;
+    }
+     .boxthatmap {
+         width: 75%;
+         height: 17.5%;
+         margin-left:15%;
+         padding-top:1em;
+         padding-bottom:1em;
+         display:block;
+    }
+     .why {
+         width: 75%;
+         height: 20%;
+    }
+     .fully {
+         padding-top: 2em;
+    }
+     .mobily {
+         font-size: 200%;
+    }
+}
+/*index.html custom code */
+ .titles {
+     color: white;
+     font-family: 'Roboto';
+     margin-top: 0.75em;
+}
+ .title {
+     padding: 100px;
+     text-align: center;
+     color: white;
+     font-family: 'Roboto';
+}
+ .title h1 {
+     padding-top: 2em;
+}
+ .button {
+     background-color: #3596E8;
+    /* Green */
+     border: 1px solid #350CE8;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     width: 15em;
+     height:4em;
+     border-radius: 10px;
+     cursor: pointer;
+     float: center;
+}
+ .button:not(:last-child) {
+     border-right: none;
+    /* Prevent double borders */
+}
+/*.button:hover {
+     background-color: #226094;
+}
+*/
+ .texting {
+     color: white;
+     font-family: 'Roboto';
+}
+ .descr {
+     font-size:175%;
+}
+ .descrr {
+     font-size:175%;
+}
+ .desch2 {
+     color: #ffffff;
+     font-family: 'Roboto';
+     font-size: 1.5em;
+     text-align: center;
+     padding-top: 1em;
+}
+ .minipic {
+     max-width: 100%;
+     height: auto;
+}
+/*Styles for the Github logo to enable infinite pulsing*/
+ .github {
+     width: 50%;
+     height: 50%;
+     animation-duration: 2.5s;
+     animation-fill-mode: both;
+     animation-iteration-count: infinite;
+}
+/*explore.html Styling*/
+/*Spaces the buttons to avoid inital overlap from the navbar.*/
+ .instruct {
+     background-color: #3FD2D6;
+     font-family: 'Lato';
+     font-weight: 100;
+     color: #fff;
+     margin-top:-1%;
+     padding-top: 1.5em;
+     padding-bottom: 10em;
+}
+/*about.html, privacy.html Styling*/
+ .privac1 {
+     margin-left:10%;
+     margin-right:10%;
+}
+ .about {
+     text-align: center;
+     font-family: 'Roboto';
+     font-size: 10em;
+     padding-top: 1em;
+     padding-bottom: 1em;
+}
+ .sec1 {
+     font-family: 'Lato';
+     font-weight: 100;
+     color: white;
+}
+ .sec1 h2 {
+     font-size: 150%;
+}
+ .hone {
+     font-family: 'Roboto';
+     font-weight: 100;
+     font-size: 225%;
+}
+ .strapthatboot {
+     width: 20%;
+     height:20%;
+     margin-left:40%;
+     padding-top:1em;
+     padding-bottom:1em;
+     display:block;
+     animation-duration: 2.5s;
+     animation-fill-mode: both;
+     animation-iteration-count: infinite;
+}
+ .boxthatmap {
+     width: 50%;
+     height: 30%;
+     margin-left:25%;
+     padding-top:1em;
+     padding-bottom:1em;
+     display:block;
+}
+/*Styling for the various Credits and images in about.html*/
+ .waw {
+     font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+}
+ .naw {
+     font-family: arial,helvetica;
+}
+ .why {
+     animation-duration: 2.5s;
+     animation-fill-mode: both;
+     animation-iteration-count: infinite;
+}
+ .fully {
+     padding-bottom: 1em;
+}
+ .wowy {
+     padding-bottom:1em;
+}
+ .section {
+     margin: 0 auto;
+}
+ .material {
+     width: 30%;
+     height: 30%;
+}
+ .stem {
+     color: black;
+}
+ .stem:hover {
+     color: #21691B;
+}
+ .codetn {
+     color: black;
+}
+ .codetn:hover {
+     color: rgba(4, 51, 255, 0.85);
+}
+/*fullPage.js personalizations*/
+ .section {
+     background-size: cover;
+     text-align:center;
+}
+ .fullpage h1 {
+     font-size: 5em;
+     font-family: arial,helvetica;
+     color: #fff;
+     margin:0;
+}
+ #section2 {
+     padding-bottom: 0;
+}
+ #section4 {
+     margin:0;
+     padding:0;
+}
+/*WOW.js Styling*/
+ .wow:first-child {
+     visibility: hidden;
+}
+ .logo {
+     animation-duration: 2.5s;
+     animation-fill-mode: both;
+}
+ .scrolldown {
+     animation-duration: 2.5s;
+     animation-fill-mode: both;
+     animation-delay: 2.5s;
+}
+#quickSlide {
+	display: none;
+}
