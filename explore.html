@@ -1,55 +1,129 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>AllerGPS - Explore</title>
-            
-    		<!-- Metadata tags for browsers-->
+        <title>AllerGPS - Explore</title>
+        
+		<!-- Metadata tags for browsers-->
+		
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<meta name="author" content="Tyler Duckworth" />
+		<meta name="Resource-type" content="Document" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1"> 
     		
-    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    		<meta name="author" content="Tyler Duckworth" />
-    		<meta name="Resource-type" content="Document" />
-    		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    	<!--Favicon Code-->
     		
-    		<!--Favicon Code-->
+		<link rel="icon" type="image/gif" href="img/pin_drop.gif" />
     		
-    		<link rel="icon" type="image/gif" href="img/pin_drop.gif" />
+		<!--Google Fonts-->
     		
-    		<!--CSS-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:thin">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
     		
-        	<link rel="stylesheet" href="libs/wowjs/animate.css">
-        	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-            <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
-            <link rel="stylesheet" type="text/css" href="css/general.css"/>
-            <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-    		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
-
+    	<!--CSS-->
+    		
+        <link rel="stylesheet" href="libs/wowjs/animate.css">
+    	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="css/general.css"/>
+        <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
     
-    		<!--JavaScript-->
+    	<!--JavaScript-->
     	
-        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     		
-    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-            <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     		
-            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
-            <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
         	
-        	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     
         <style>
             body { margin:0; padding:0; }
-            #map { width:100%;height:500px; }
+            #map { width:100%;height:45rem; }
             .explore {
             	padding-top: 5em;
             }
-    	</style>
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+            
+            .peanuts {
+              background-image: url('img/markers/peanut.png');
+              background-size: cover;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            .nuts {
+              background-image: url('img/markers/nuts.png');
+              background-size: cover;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            .wheat {
+              background-image: url('img/markers/wheat.png');
+              background-size: cover;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            .dairy {
+              background-image: url('img/markers/dairy.png');
+              background-size: cover;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            .seafood {
+              background-image: url('img/markers/seafood.png');
+              background-size: cover;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+
+            @media only screen and (max-width: 1100px) {
+                .pl-4 {
+                    padding-left:5rem!important;
+                }
+                .pl-5 {
+                    padding-left:5.5rem!important;
+                }
+                .grades {
+                    font-size:150%;
+                }
+            }
+        </style>
+        	
+        <script type="text/javascript">
+        	$(document).ready(function() {
+        		$(".button-collapse").sideNav();
+        	});
+        </script>
+        
     </head>
+    
+<!--
+	    There are many classes and IDs used in this website. 
+	        The class 'wow' denotes WOW.js, followed by the animation of choice, including 'fadeIn,' 'fadeInDown', or 'fadeUp' along with variables changing length and delay
+	        ID 'fullpage', subsequent class 'section', and other markers ['section0', 'section1', etc.] denote the section of the page that will be affected by fullPage.js, in this case, everything but the navbar
+	        Class 'sec1' denotes the main text in each of the slides on this page and the About page. It can be seen at Line 222 of general.css.
+	        The Bootstrap classes 'col', 'mx-auto', and 'd-block' are used to correctly space the navbar and the footer.
+	        The Bootstrap class 'col' and 'row' are also used to correctly space images and text.
+	
+		In this file: 
+			The 'intro' class is a general color and font-weight style for the text in this page. For more info, see Line 116-119 of general.css
+	-->
     
     <body class="bod">
         
@@ -83,11 +157,8 @@
     		
             <div class="explore">
         	    
-        	    <!--Instructions on how to work the website.-->
-        	    
-
-        	    
-        	    <!--Buttons that trigger the plots on the map. Each allergy is -->
+        	    <!--Instructions on how to work the website are made possible with the FeatherLight.js library. FeatherLight creates amazing LightBox effects on elements..-->
+        	    <!--Buttons that trigger the plots on the map. Each allergy is specific to each button-->
         	    
         	    <div id="buttons">
         	        <button id="nuts">Nuts</button>
@@ -99,7 +170,32 @@
         	        <button data-featherlight="#inst">Instructions</button>
         	    </div>
         	
+        	    <!--This div holds the map. The map will be instantiated in search.js.-->
+        	
         	    <div id='map'></div>
+        	    
+        	    <!--
+        	        This section serves to explain how we grade our restaurants and deem them graphable.
+        	        To see this in action, look at allergps.json. 
+        	        In the future, we hope to add an inverse graphing function, where it graphs all of the restaurants that one CAN'T go to.
+        	    -->
+        	    
+        	    <div class="grading">
+        	        
+        	        <h1 class="grades wow fadeIn" data-wow-duration="1.5s" style="font-size: 300%;">What grading system do we use for our restaurants?</h1>
+        	        <div class="row grade">
+        	            <p class="col wow fadeInDown">0</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="1.5s" data-wow-duration="1s">0.25</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="2.5s" data-wow-duration="1s">0.5</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="3.5s" data-wow-duration="1s">0.75</p>
+        	            <p class="col wow fadeInDown" data-wow-delay="4.5s" data-wow-duration="1s">1</p>
+        	        </div>
+        	        <p class="grades wow fadeInUp" data-wow-delay="5.5s" style="font-size: 200%;padding-bottom:2em;">We use a custom-made 5-point grading scale for each of our restaurants <br />to distinguish their level of allergy.
+        	        0-0.25 means that nearly all, or anything worth eating, <br />at the restaurant has the allergen in some way.
+        	        All of the points you see when you press <br />a button gave an allergen rating of 0.5 or higher. </p>
+        	    </div>
+        	    
+        	    <!--Footer-->
         	    
                 <div class="section mobfo" id="section5 section-footer" style="background-color:#7791C2;">
                     
@@ -132,11 +228,11 @@
                             <!--Third column-->
                             
                             <div class="col-md-2 mx-auto">
-                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown" data-wow-delay="2.5s">Other</h5>
+                                <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown others" data-wow-delay="2.5s">Other</h5>
                                 <ul>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="other/terms.html" style="color:white;">Terms of Use</a></li>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="other/privacy.html" style="color:white;">Privacy Policy</a></li>
-                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/contact.html" style="color:white;">Contact Us</a></li>
+                                    <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="other/privacy.html#sixthPage/1" style="color:white;">Contact Us</a></li>
                                     <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
                                 </ul>
                             </div>
@@ -154,6 +250,9 @@
                     </div>
         		</div>
             </div>
+            
+            <!--This div holds the FeatherLight content that the button Instructions displays.-->
+            
             <div id="quickSlide">
                 <div class="lightbox" id="inst">
             	    <div class="instruct">

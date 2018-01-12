@@ -18,7 +18,7 @@
         
         <!--CSS Stylesheets including ones from libraries stored locally and styling for web elements.-->
         
-        <link rel="stylesheet" href="../libs/bootstrap/font-awesome.min.css"> 
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="../libs/fullPage/jquery.fullPage.css" />
         <link rel="stylesheet" href="../libs/wowjs/animate.css">
@@ -104,8 +104,8 @@
     	    
     	    <!--Title section-->
     	    
-            <div class="section" id="section0">
-                <h1 class="about wow fadeIn" data-wow-duration="2s">About Us</h1>
+            <div class="section" id="section0 abt0" style="background-color: rgba(225, 225, 225, .5);">
+                <h1 class="abouts wow fadeIn" data-wow-duration="2s">About Us</h1>
             </div>
             
             <!--Section specifically about our team. No picture of us, but maybe some after the final.-->
@@ -158,30 +158,30 @@
                 WOW.js animations are set to appear for each slide in sequential order.
                 -->
                     
-                <div class="slide" id="slide0" style="background-color:#FFFF00;">
+                <div class="slide" id="slide0" style="background-color:#E3E300;">
                     <h2 class="sec1 wow fadeInDown" data-wow-duration="1s">Credits</h2>
                     <p class="sec1 wow fadeIn" data-wow-delay="1s" style="font-size:150%;">We used a lot of different software to create this website and all of its features.</p>
                     <a href="https://getbootstrap.com/docs/3.3/">
                         <div class="">
-                            <img src="../img/bootstrap-solid.svg" class="strapthatboot wow pulse" alt="Click to go to the Bootstrap website.">
+                            <img src="../img/logos/bootstrap-solid.svg" class="strapthatboot wow pulse" alt="Click to go to the Bootstrap website.">
                         </div></a>
 
                     <p class="sec1 wow fadeIn" data-wow-delay="2s" style="font-size:150%;">We used <b style="color:#563D7C;">Bootstrap</b>, an open-source CSS and JavaScript library to organize our webpage smoothly.</p><br />
                 </div>
                 
                 <div class="slide" id="slide1" style="background-color:#FFC34B;">
-                    <a href="https://www.mapbox.com/"><img src="../img/mapbox-logo-color.png" class="boxthatmap wow fadeIn" data-wow-duration="1s" alt="Click to go to the Mapbox website."></a>
+                    <a href="https://www.mapbox.com/"><img src="../img/logos/mapbox-logo-color.png" class="boxthatmap danka wow fadeIn" data-wow-duration="1s" alt="Click to go to the Mapbox website."></a>
                     <p class="sec1 wow fadeInUp" data-wow-delay="1s" style="font-size:150%;">We also used <b style="color:#3887be;font-size:200%;"><a href="https://www.mapbox.com/" style="color:#3887be;">MapBox</a></b>, an online Google Map alternative that features fully customizable and embeded maps <br />to create the map you use for AllerSearch! We also used MapBox's Geocoding API for part of our application.</p>
                 </div>
                 
                 <div class="slide" id="slide2" style="background-color:#29E64E;">
                     <h3 class="sec1 fully wow fadeInDown" data-wow-delay="0.5s"style="font-size: 200%;">We used <b style="color:#444;"><a href="https://alvarotrigo.com/fullPage/" style="color:#444;">fullPage.js</a></b>, the amazing plugin that enables us to create amazing scrolling effects.</h3>
-                    <img src="../img/wow-logo.jpg" class="wow tada why">
+                    <img src="../img/logos/wow-logo.jpg" class="wow tada why">
                     <h3 class="sec1 wowy wow fadeInUp" data-wow-delay="1.5s" style="font-size: 200%;">In addition to this, we also used <b class="waw" style="color:#EE366A;"><a href="http://mynameismatthieu.com/WOW/index.html" class="waw" style="color:#EE366A;">WOW.js</a></b>, a JavaScript plugin that uses Animate.css to create beautiful appear-on-scroll effects.</h3>
                 </div>
                 
                 <div class="slide" id="slide3" style="background-color:#5E8CBF;">
-                    <a href="http://materializecss.com/"><img src="../img/MaterializeCSSLogo.svg" class="material"></a>
+                    <a href="http://materializecss.com/"><img src="../img/logos/MaterializeCSSLogo.svg" class="material"></a>
                     <h3 class="sec1 mobily">Finally, for our mobile navbar, we used <b style="color:#ee6e73;"><a style="color:#ee6e73;" href="http://materializecss.com/">Materialize.css</a></b>, Google-owned framework that allows for simple and efficent mobile formatting.</h3>
                 </div>
                 
@@ -207,11 +207,11 @@
             
                         <!--Second column-->
                         <div class="col-md-2 mx-auto">
-                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-0 ml-2 font-bold wow fadeInDown navi" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
+                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-4 ml-4 font-bold wow fadeInDown navi" data-wow-delay="1.5s" style="text-align:center">Navigation</h5>
                             <ul>
                                 <li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="../index.html" style="color:white;">Home</a></li>
                                 <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="../explore.html" style="color:white;">AllerSearch</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="#!" style="color:white;">About Us</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="#" style="color:white;">About Us</a></li>
                             </ul>
                         </div>
 
@@ -219,11 +219,11 @@
             
                         <!--Third column-->
                         <div class="col-md-2 mx-auto">
-                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-0 ml-2 font-bold wow fadeInDown oth" data-wow-delay="2.5s">Other</h5>
+                            <h5 class="title mb-2 mt-0 pt-4 pb-3 pl-5 ml-4 font-bold wow fadeInDown oth" data-wow-delay="2.5s">Other</h5>
                             <ul>
                                 <li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.75s" data-wow-duration="1s"><a href="terms.html" style="color:white;">Terms of Use</a></li>
                                 <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3s" data-wow-duration="1s"><a href="privacy.html" style="color:white;">Privacy Policy</a></li>
-                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="contact.html" style="color:white;">Contact Us</a></li>
+                                <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.25s" data-wow-duration="1s"><a href="privacy.html#sixthPage/1" style="color:white;">Contact Us</a></li>
                                 <li style="color:white;" class="navg wow fadeIn" data-wow-delay="3.5s" data-wow-duration="1s"><a href="https://goo.gl/forms/dtnMAdgdxDjXvuH03" style="color:white;">Help</a></li>
                             </ul>
                         </div>

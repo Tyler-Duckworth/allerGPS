@@ -84,9 +84,9 @@
         */
         
             function toggleLayers(clss, color, geojsn) {
-                    if(!map.getLayer(clss)) {
-                        console.log("Adding layer " + clss + " now..");
-                        map.addLayer({
+                    if(!map.getSource(clss)) {
+                        console.log("Adding source " + clss + " now..");
+                        /*map.addLayer({
                             'id': clss,
                             'type': 'circle',
                             "source": {
@@ -97,27 +97,31 @@
                                 'circle-radius': 9,
                                 'circle-color': '#fff'
                             }
+                        });*/
+                        map.addSource(clss, {
+                            'type' : 'geojson',
+                            'data' : geojsn
                         });
-                        map.addLayer({
-                            'id': clss+'-halo',
-                            'type': 'circle',
-                            "source": {
-                                "type": "geojson",
-                                "data": geojsn
-                            },
-                            'paint': {
-                                'circle-radius': 7,
-                                'circle-color': color
-                            }
+                        geojsn.features.forEach(function(marker) {
+                            console.log(marker);
+                            var el = document.createElement('div');
+                            el.className = clss;
+                            console.log(el);
+                            
+                            new mapboxgl.Marker(el)
+                              .setLngLat(marker.geometry.coordinates)
+                              
+                              .addTo(map);
                         });
                         $('#'+clss).addClass('active');
                     } else {
+                        /*
                         console.log(map.getLayoutProperty(clss, 'visibility'));
                         if(map.getLayoutProperty(clss, 'visibility') == "none") {
                             console.log("Changing visibility now");
                             map.setLayoutProperty(clss, 'visibility', 'visible');
                             map.setLayoutProperty(clss+"-halo", 'visibility', 'visible');
-                        }
+                        }*/
                         $('#'+clss).addClass('active');
                     }
             }
