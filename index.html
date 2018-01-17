@@ -89,7 +89,7 @@
 					navigation: true,
 					slidesNavigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'Mobile', 'Footer'],
+					navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'GitHub', 'Footer'],
 					scrollBar: true,
 					scrollingSpeed: 1000,
 					responsiveWidth: 1100
@@ -154,7 +154,7 @@
 	
 			<!--Title section with logo and button to take you to AllerSearch-->
 	
-			<div class="section" id="section0 thingie" style="background-color:white;">
+			<div class="section" id="section0 thingie" style="background-color:#9DBEFF;">
 				<script>
 					$(document).on('click', '#scrollid', function(){
 						$.fn.fullpage.moveSectionDown();
@@ -175,9 +175,9 @@
 			<div class="section" id="section1" style="background-color:#3FD2D6;">
 	
 				<div class="intro texting">
-					<h1 class="yoy wow fadeIn" style="font-size:250%">What is AllerGPS?</h1>
+					<h1 class="yoy wow fadeIn whatis">What is AllerGPS?</h1>
 					<br />
-					<h3 class="yoy wow fadeIn whothy" style="font-size:200%" data-wow-delay="1s">
+					<h3 class="yoy wow fadeIn whothy whatiss" data-wow-delay="1s">
 						AllerGPS is a dynamic web application built for those who have allergies that <br />hinder them from eating certain foods. <br /> <br /> It takes into account these allergies to chart a map of locations that the user can go to <br />and enjoy without
 						worrying about their allergies.
 						<br /> <br /> AllerGPS was made to be simple, elegant, and powerful.
@@ -260,7 +260,7 @@
 						-->
 	
 					<a href="https://github.com/allerGPS/allerGPS"><img src="img/logos/GitHub_Logo_White.png" class="github pulse"></a>
-					<h3 class="texting wow fadeInDown" data-wow-delay="0.5s" data-wow-duration="1s" style="font-size:200%;">Come check out the source code for this website on our GitHub! <br />Feel free to clone the code and make a spinoff application!</h3>
+					<h3 class="texting wow fadeInDown githubs" data-wow-delay="0.5s" data-wow-duration="1s">Come check out the source code for this website on our GitHub! Feel free to clone the code and make a spinoff application!</h3>
 				</div>
 			</div>
 	
@@ -290,9 +290,7 @@
 								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="1.75s" data-wow-duration="1s"><a href="#" style="color:white;">Home</a></li>
 								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><a href="explore.html" style="color:white;">AllerSearch</a></li>
 								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2.25s" data-wow-duration="1s"><a href="other/about.html" style="color:white;">About Us</a></li>
-								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><button id ="present" type="button" style="background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Present</button>
-</a></li>
-
+								<li style="color:white;" class="navg wow fadeIn" data-wow-delay="2s" data-wow-duration="1s"><button id ="present" type="button" style="background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Present</button></a></li>8
 							</ul>
 						</div>
 	
@@ -337,11 +335,11 @@
 
 		<script>
 			$("#present").click( function() {
-    setTimeout(function(){ $.fn.fullpage.moveTo(1); }, 1000);
-    setTimeout(function(){ $.fn.fullpage.moveTo(2); }, 10000);
-    setTimeout(function(){ $.fn.fullpage.moveTo(3); }, 10000);
-    setTimeout(function(){ $.fn.fullpage.moveTo(4); }, 10000);
-    setTimeout(function(){ $.fn.fullpage.moveTo(5); }, 10000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(1); }, 1000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(2); }, 10000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(3); }, 10000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(4); }, 10000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(5); }, 10000);
            });
 		</script>
 	</body>

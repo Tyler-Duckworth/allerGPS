@@ -116,7 +116,8 @@
 	}
 	 .intro p, h1, h3{
 	     color: #fff;
-	     font-weight:100;
+		 font-weight:50;
+		 font-family: 'Lato';
 	}
 	 .mobfo {
 	     margin-bottom:-5%;
@@ -182,7 +183,16 @@
 	    }
 	     .mobily {
 	         font-size: 200%;
-	    }
+		}
+		.githubs {
+			font-size:150%;
+		}
+		.whatis {
+			font-size:200%;
+		}
+		.whatis {
+			font-size:150%;
+		}
 	}
 
 /*index.html custom code */
@@ -194,7 +204,7 @@
 	 .titles {
 	     color: white;
 	     font-family: 'Roboto';
-	     margin-top: 0.75em;
+	     margin-top: 1em;
 	}
 	 .title {
 	     padding: 100px;
@@ -262,6 +272,12 @@
 	     max-width: 100%;
 	     height: auto;
 	}
+	.whatis {
+		font-size:250%;
+	}
+	.whatiss {
+		font-size:200%;
+	}
 	
 /*Styles for the Github logo to enable infinite pulsing*/
 	 .github {
@@ -270,6 +286,9 @@
 	     animation-duration: 2.5s;
 	     animation-fill-mode: both;
 	     animation-iteration-count: infinite;
+	}
+	.githubs {
+		font-size:200%;
 	}
 	
 /*explore.html Styling*/
