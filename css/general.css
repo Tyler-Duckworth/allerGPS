@@ -11,8 +11,7 @@
 	     margin: 0 auto;
 	}
 	 .bod {
-	     background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #999 78%), linear-gradient(63deg, transparent 34%, #999 38%, #fff 58%, transparent 62%), #5A6D92;
-	     background-size: 16px 48px;
+	    
 	}
 	
 /*Navbar Styling*/
@@ -435,3 +434,7 @@
 	     animation-fill-mode: both;
 	}
 
+.center{
+	    align-content: center;
+
+}
