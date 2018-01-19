@@ -89,7 +89,7 @@
 					navigation: true,
 					slidesNavigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Why AllerGPS', 'Features', 'GitHub', 'Footer'],
+					navigationTooltips: ['Welcome', 'What is AllerGPS?', 'Features', 'GitHub', 'Footer'],
 					scrollBar: true,
 					scrollingSpeed: 1000,
 					responsiveWidth: 1100
@@ -154,7 +154,7 @@
 	
 			<!--Title section with logo and button to take you to AllerSearch-->
 	
-			<div class="section" id="section0 thingie" style="background-color:#FFFFFF;">
+			<div class="section" id="section0 thingie" style="background-color:#9DBEFF;">
 				<script>
 					$(document).on('click', '#scrollid', function(){
 						$.fn.fullpage.moveSectionDown();
@@ -185,17 +185,6 @@
 					</h3>
 				</div>
 			</div>
-			
-			<div class="section" id="section2" style="background-color:#55DE6E;">
-	
-				<div class="intro texting borderz">
-					<h1 class="yoy wow fadeIn">Our Mission</h1>
-					<h3 class="yoy wow fadeIn whothy whatiss" data-wow-delay="1s" style="padding-left:10%; padding-right:10%;">
-					AllerGPS is designed to help people who have food allergies feel safer when going out to eat. <br><br>
-					The percentage of people with food allergies has been increasing every year. Researchers estimate that up to 15 million Americans have food allergies, including 5.9 million children under age 18. In 2010 3.9% of children said that they suffered from food allergies. The Centers for Disease Control & Prevention reports that the prevalence of food allergy in children increased by 50 percent between 1997 and 2011.
-					</h3>
-				</div>
-			</div>
 	
 	
 			<!--This section tells the features of AllerGPS, as to interest the reader
@@ -203,7 +192,7 @@
 				procedurally generate the data and the bounding box of the map to ensure a custom user experience.
 				-->
 	
-			<div class="section" id="section3">
+			<div class="section" id="section2">
 	
 				<!--Slide about AllerGPS's AllerBase DB and Global Access
 					To download AllerBase, go to markers and download the markers ZIP file.
@@ -263,7 +252,7 @@
 	
 			<!--This section is meant to link to our GitHub repo of this website and encourage the reader to try to make improvements to it on their own.-->
 	
-			<div class="section" id="section4" style="background-color:#55DE6E">
+			<div class="section" id="section3" style="background-color:#55DE6E">
 				<div class="intro intrare">
 	
 					<!--Awesome Animate.css infinite pulsing animation
@@ -346,13 +335,10 @@
 
 		<script>
 			$("#present").click( function() {
-				for (i = 0; i < 10; i++) {
-				    setTimeout(function(){ $.fn.fullpage.moveTo(1); }, 1000);
-				    setTimeout(function(){ $.fn.fullpage.moveTo(2); }, 2000);
-				    setTimeout(function(){ $.fn.fullpage.moveTo(3); }, 3000);
-					setTimeout(function(){ $.fn.fullpage.moveTo(4); }, 4000);
-				    setTimeout(function(){ $.fn.fullpage.moveSlideRight(); }, 5000);
-				}
+			    setTimeout(function(){ $.fn.fullpage.moveTo(1); }, 1000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(2); }, 1000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(3,1); }, 1000);
+			    setTimeout(function(){ $.fn.fullpage.moveTo(3, 2); }, 1000);
            });
 		</script>
 	</body>
