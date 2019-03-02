@@ -1,5 +1,18 @@
+Information on the Fork
+====
+
+This was forked from our existing repository to be hosted on my Github Pages as a project example. 
+
+Information  on the Project
+===========================
+
+For more info on the project itself, and our ideation process, see [this](https://tyler-duckworth.github.io/2019/02/10/allergps/) blog post.
+
+
+## The Below is the ReadME of the original repo.
+
 To All CodeTN Judges:
-=====================
+---------------------
 This website is hosted on a server [here](https://www.allergps.com)
 
 Restarting the server can be done in two ways:
@@ -18,7 +31,7 @@ If this does not work, email me at <s848387@student.knoxschools.org> for a copy 
 You can also check out our GitHub repository [here](https://github.com/allerGPS/allerGPS).
 
 The MIT License (MIT)
-=====================
+---------------------
 
 Copyright © `2018` `allerGPS`
 
